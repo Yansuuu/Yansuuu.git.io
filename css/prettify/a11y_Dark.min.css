@@ -3,7 +3,7 @@
  * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
  * @author ericwbailey
  */
-
+.prettyprint{
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
@@ -157,4 +157,5 @@ pre[class*="language-"] {
 	.token.url {
 		font-weight: normal;
 	}
+}
 }
