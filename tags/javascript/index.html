@@ -365,10 +365,10 @@
 
     var locatePost = $('.locate-thumbnail-symbol').next();
     for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
+        randomNum = Math.floor(Math.random() * 1 + 1);
 
         locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/cointoss-random.png' + randomNum + '.png');
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/cointoss-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
 
         locatePost = locatePost.next();
@@ -670,6 +670,10 @@ It will not impact the appearance and can give developers a lot of support :)
 <!-- Import prettify js  -->
 
 
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
 
 <!-- Window Load -->
 <!-- add class for prettify -->
@@ -680,6 +684,10 @@ It will not impact the appearance and can give developers a lot of support :)
     });
 
     
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
     
 </script>
 
