@@ -43,7 +43,7 @@
     
     <title>
         
-            分类: javascript | 
+            tags | 
         
         Yansuuu&#39;s blog
     </title>
@@ -81,8 +81,6 @@
         <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
         
-            
-        
 
     
 
@@ -112,13 +110,13 @@
   #scheme-Paradox .sidebar_archives-count,
   #scheme-Paradox .sidebar-colored .sidebar-header,
   #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #64FFDA !important;
+    background-color: #1de9b6 !important;
   }
 
   /* Sidebar User Drop Down Menu Text Color */
   #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
   #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #64FFDA !important;
+    color: #1de9b6 !important;
   }
 
   #post_entry-right-info,
@@ -131,25 +129,25 @@
   .sidebar-colored .sidebar-nav > .open > a:hover,
   .sidebar-colored .sidebar-nav > .open > a:focus,
   #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #64FFDA !important;
+    color: #1de9b6 !important;
   }
 
   .toTop {
-    background: #757575 !important;
+    background: #1de9b6 !important;
   }
 
   .material-layout .material-post>.material-nav,
   .material-layout .material-index>.material-nav,
   .material-nav a {
-    color: #757575;
+    color: #1de9b6;
   }
 
   #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
+    background-color: #1de9b6;
   }
 
   #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
+    color: #1de9b6;
   }
 
   .post-toc a:hover {
@@ -164,7 +162,7 @@
 
     <style>
       body{
-        background-color: #64FFDA;
+        background-color: #212121;
       }
 
       /* blog_info bottom background */
@@ -217,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/categories/学习笔记/javascript/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/tags/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -232,9 +230,9 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/categories/学习笔记/javascript/">
+    <meta property="og:url" content="http://yoursite.com/tags/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: javascript | Yansuuu&#39;s blog">
+    <meta property="og:title" content="tags | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
     
@@ -246,7 +244,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/学习笔记/javascript/index.html" />
+        <link rel="canonical" href="http://yoursite.com/tags/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,7 +263,8 @@
     <!-- Custom Head -->
     
 
-</head>
+<link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
     
@@ -286,99 +285,63 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
-    
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+<!-- Layouts -->
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/21/根据年月日得出一年第几天的Js简单实现及优化/">输入某年某月某日，判断这一天是这一年的第几天？</a></p>
-    </div>
+    <!-- Tags Cloud -->
+    <style>
+    #bottom{
+        position: relative;
+    }
 
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            提示： 4年一润，百年不润，400又润
+    @media screen and (max-width: 480px) {
+        .material-tagscloud{
+            margin: 6em 2em 0;
+        }
+    }
 
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/21/根据年月日得出一年第几天的Js简单实现及优化/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/cointoss-avtar.png" width="44px" height="44px" alt="Yansuuu's avatar">
-            </div>
-            <div>
-                <strong>Yansuuu</strong>
-                <span>4月 21, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/学习笔记/">学习笔记</a>, <a class="post_category-link" href="/categories/学习笔记/javascript/">javascript</a>
-              </span>
-            
+    .material-tagscloud a{
+        text-decoration:none;
+        padding: 1px 9px;
+        margin: 9px 1px;
+        line-height: 40px;
+        white-space: nowrap;
+        transition: .6s;
+        opacity: .85;
+    }
 
-            
+    .material-tagscloud a:hover{
+        transition: .6s;
+        opacity: 1;
+        background: #FAFAFA;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+</style>
 
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
+<div class=" material-tagscloud">
+    <div class="material-post mdl-grid">
+        <a href="/tags/javascript/" style="font-size: 16px; color: #757575">javascript</a> <a href="/tags/算法/" style="font-size: 16px; color: #757575">算法</a>
     </div>
 </div>
 
-            
-            
-        
-    
 
-    
+<script type="text/ls-javascript" id="page-tagcloud-script">
+    var adjustFooter = function() {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
+            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
+            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+        }
+    };
 
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 1 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
+    $(document).ready(function() {
+        adjustFooter();
+    });
 </script>
 
-    
-</div>
+
+
 
 
                     
@@ -389,7 +352,7 @@
 <aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
     <div id="sidebar-main">
         <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/cointoss-sidebar.png);">
+        <div class="sidebar-header header-cover" style="background-image: url(/img/galax-sidebar-header.png);">
     <!-- Top bar -->
     <div class="top-bar"></div>
 
@@ -404,12 +367,12 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="/img/cointoss-avtar.png" alt="Yansuuu's avatar">
+        <img src="/img/cointoss-avtar-2.png" alt="Yansuuu's avatar">
     </div>
 
     <!-- Sidebar Email -->
     <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        youremail@email.com
+        18840842225@163.com
         <b class="caret"></b>
     </a>
 </div>
@@ -466,11 +429,54 @@
 
     <!-- Categories  -->
     
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
 
     <!-- Pages  -->
     
+        <li>
+            <a href="/tags" title="tags">
+                
+                    <i class="material-icons sidebar-material-icons">label-outline</i>
+                
+                tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">1</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -492,13 +498,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -526,14 +525,6 @@ It will not impact the appearance and can give developers a lot of support :)
                     
 
                     
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
 
                     <!--Footer-->
 <footer class="mdl-mini-footer" id="bottom">
@@ -542,29 +533,11 @@ It will not impact the appearance and can give developers a lot of support :)
         <div class="mdl-mini-footer--left-section sns-list">
     <!-- Twitter -->
     
-        <a href="https://twitter.com/twitter" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Facebook -->
     
-        <a href="https://www.facebook.com/facebook" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
-                <span class="visuallyhidden">Facebook</span>
-            </button><!--
-     --></a>
-    
 
     <!-- Google + -->
-    
-        <a href="https://www.google.com/" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
-                <span class="visuallyhidden">Google Plus</span>
-            </button><!--
-     --></a>
     
 
     <!-- Weibo -->
@@ -577,6 +550,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Github -->
+    
+        <a href="https://github.com/Yansuuu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
     
 
     <!-- LinkedIn -->
@@ -641,14 +620,14 @@ It will not impact the appearance and can give developers a lot of support :)
     });
     NProgress.start();
     $('#nprogress .bar').css({
-        'background': '#29d'
+        'background': '#64FFDA'
     });
     $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+        'box-shadow': '0 0 10px #64FFDA, 0 0 15px #64FFDA'
     });
     $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
+        'border-top-color': '#64FFDA',
+        'border-left-color': '#64FFDA'
     });
     setTimeout(function() {
         NProgress.done();
@@ -679,8 +658,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Import prettify js  -->
 
-    
-
 
 
 <!-- Window Load -->
@@ -691,8 +668,6 @@ It will not impact the appearance and can give developers a lot of support :)
         $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
     });
 
-    
-        
     
     
 </script>
