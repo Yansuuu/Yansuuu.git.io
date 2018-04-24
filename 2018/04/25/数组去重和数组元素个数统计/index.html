@@ -43,7 +43,7 @@
     
     <title>
         
-            BubbleSort三种版本 | 
+            数组去重和数组元素个数统计 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/04/23/BubbleSort/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/04/25/数组去重和数组元素个数统计/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/04/23/BubbleSort/">
+    <meta property="og:url" content="http://yoursite.com/2018/04/25/数组去重和数组元素个数统计/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="BubbleSort三种版本 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="数组去重和数组元素个数统计 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="算法"> 
 
     
-        <meta property="article:published_time" content="Mon Apr 23 2018 03:04:41 GMT+0800">
-        <meta property="article:modified_time" content="Mon Apr 23 2018 03:51:07 GMT+0800">
+        <meta property="article:published_time" content="Wed Apr 25 2018 04:47:31 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 25 2018 05:16:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/04/23/BubbleSort/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/04/25/数组去重和数组元素个数统计/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/04/23/BubbleSort/index.html",
-    "headline": "BubbleSort三种版本",
-    "datePublished": "Mon Apr 23 2018 03:04:41 GMT+0800",
-    "dateModified": "Mon Apr 23 2018 03:51:07 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/04/25/数组去重和数组元素个数统计/index.html",
+    "headline": "数组去重和数组元素个数统计",
+    "datePublished": "Wed Apr 25 2018 04:47:31 GMT+0800",
+    "dateModified": "Wed Apr 25 2018 05:16:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -347,7 +347,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冒泡排序："><span class="post-toc-number">1.</span> <span class="post-toc-text">冒泡排序：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本一：原始版对比量为（n-1）-（n-1）"><span class="post-toc-number">2.</span> <span class="post-toc-text">版本一：原始版对比量为（n-1）* （n-1）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本二：减少每轮比较次数"><span class="post-toc-number">3.</span> <span class="post-toc-text">版本二：减少每轮比较次数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本三：在减少每轮对比次数的基础上，减少轮数"><span class="post-toc-number">4.</span> <span class="post-toc-text">版本三：在减少每轮对比次数的基础上，减少轮数</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组元素个数统计"><span class="post-toc-number">1.</span> <span class="post-toc-text">数组元素个数统计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组去重"><span class="post-toc-number">2.</span> <span class="post-toc-text">数组去重</span></a></li></ol>
     </ul>
     
 
@@ -379,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                BubbleSort三种版本
+                数组去重和数组元素个数统计
             </p>
         </div>
 
@@ -398,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>4月 23, 2018</span>
+        <span>4月 25, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -467,71 +467,47 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="冒泡排序："><a href="#冒泡排序：" class="headerlink" title="冒泡排序："></a>冒泡排序：</h2><p>排序的一种，相邻两个元素作比较，符合某种规则交换位置，直到达到目标为止</p>
-<p>一下为利用冒泡排序将一组数列从小到大重新排序</p>
-<h2 id="版本一：原始版对比量为（n-1）-（n-1）"><a href="#版本一：原始版对比量为（n-1）-（n-1）" class="headerlink" title="版本一：原始版对比量为（n-1）* （n-1）"></a>版本一：原始版对比量为（n-1）* （n-1）</h2><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第一版冒泡排序将对比n-1轮，每轮对比n-1次，所以用一个循环控制轮数;</span>
-<span class="token comment" spellcheck="true">//第二个循环控制每轮次数;</span>
-<span class="token comment" spellcheck="true">//n为数组元素个数，即arr.length;</span>
-<span class="token comment" spellcheck="true">//因为数组索引取值从0开始，所以arr.length-1;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//把大的数放到后面去，小的放到前面去</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        <h2 id="数组元素个数统计"><a href="#数组元素个数统计" class="headerlink" title="数组元素个数统计"></a>数组元素个数统计</h2><p>[“c”,”a”,”z”,”a”,”x”,”a”,”x”]找到数组中每一个元素出现的次数</p>
+<p>思路：将数组中的元素看作是一个对象的的属性，元素的个数就是对应的对象属性的值（尝试用forEach做）</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"c"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"z"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"x"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"x"</span><span class="token punctuation">]</span>
+    <span class="token keyword">var</span> json <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//forEach方法来做</span>
+    arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>element<span class="token punctuation">,</span> index<span class="token punctuation">,</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//用数组元素对应json对象中的属性，属性值就是数组元素出现的次数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>json<span class="token punctuation">[</span>element<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//如果数组中的元素在json中已经存在对应的属性，则在原有属性值上加1</span>
+            json<span class="token punctuation">[</span>element<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//如果不存在对应属性，则创建一个并赋值为1</span>
+            json<span class="token punctuation">[</span>element<span class="token punctuation">]</span> <span class="token operator">=</span>  <span class="token number">1</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="版本二：减少每轮比较次数"><a href="#版本二：减少每轮比较次数" class="headerlink" title="版本二：减少每轮比较次数"></a>版本二：减少每轮比较次数</h2><p>实际上在对比时，每一轮都会得到自己一个最值（最大值或者最小值），</p>
-<p>也就是说每轮都可以比上一轮少比较一次</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第二版冒泡排序还是对比n-1轮</span>
-    <span class="token comment" spellcheck="true">//但每轮对比次数都比上一轮少一次,所以j &lt; arr.lenegth-1-i;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token operator">-</span>i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//把大的数放到后面去，小的放到前面去</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>json<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//{c: 1, a: 3, z: 1, x: 2}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>第一版对比轮数是5*5=25次；</p>
-<p>第二版则是5+4+3+2+1=15次；</p>
-<h2 id="版本三：在减少每轮对比次数的基础上，减少轮数"><a href="#版本三：在减少每轮对比次数的基础上，减少轮数" class="headerlink" title="版本三：在减少每轮对比次数的基础上，减少轮数"></a>版本三：在减少每轮对比次数的基础上，减少轮数</h2><p>实际将数组重新排序的情况，会有在中途就已经排序好的情况，如果我们能检查出来这种情况，剩下的比较轮数就可以不用去进行了。<br>什么情况算是排序好了呢？<br>当一轮比较中不在有前边的数比后面的数大了，不再发生换位的时候。</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">var</span> sum1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//来统计一共比较了多少次</span>
-<span class="token keyword">var</span> sum2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//来统计一共比较了几轮</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第三版冒泡排序将使用开闭原则检查是否还需要换位</span>
-    <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">//设置一个标识来判断是否发生了换位</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token operator">-</span>i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-            flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//发生了换位将标识flag赋值为false；</span>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>编写一个方法 去掉一个数组的重复元素 [“c”,”a”,”z”,”a”,”x”,”a”,”x”]；</p>
+<p>思路：创建一个新数组，从老数组中取值添加进去前判断新数组中是否有了同样的元素，如果有了不添加，如果没有添加 （用forEach来做）</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"c"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"z"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"x"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"x"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+arr<span class="token punctuation">.</span>delMore <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> arrNew <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//开闭原则，当发现新数组中有老数组的元素时设为false;</span>
+        arrNew<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>element2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//将老数组的元素和新数组中的元素一一比较</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>element <span class="token operator">===</span> element2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//一旦发现新数组中已经存在同样元素，将flag改为false；</span>
+                flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//当flag值不变为false，说明这个老数组中的元素在新数组中没有，将其添加到新数组中；</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arrNew<span class="token punctuation">[</span>arrNew<span class="token punctuation">.</span>length<span class="token punctuation">]</span> <span class="token operator">=</span> element<span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        sum1 <span class="token operator">=</span><span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    sum2 <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当flag不发生变化，也就是说这一轮中的元素已经不发生交换了，这时候可以跳出循环，因为排序已经完成了；</span>
-    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> arrNew<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44];</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sum1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//12</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sum2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>第三版只比较了三轮，12次，比第二版比较次数还要少。</p>
+arr2 <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">delMore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -552,21 +528,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/04/24/判断素数的三种写法/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/04/23/递归初级练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/04/24/判断素数的三种写法/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
