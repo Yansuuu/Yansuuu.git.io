@@ -43,7 +43,7 @@
     
     <title>
         
-            事件添加和解绑的兼容性写法记录 | 
+            缓动动画框架简易版本封装二 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,笔记">
+    <meta name="keywords" content=",javascript,练习">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/02/事件添加和解绑的兼容性写法记录/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/05/02/事件添加和解绑的兼容性写法记录/">
+    <meta property="og:url" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="事件添加和解绑的兼容性写法记录 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="缓动动画框架简易版本封装二 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="笔记"> 
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
 
     
-        <meta property="article:published_time" content="Wed May 02 2018 00:57:06 GMT+0800">
-        <meta property="article:modified_time" content="Wed May 02 2018 01:50:33 GMT+0800">
+        <meta property="article:published_time" content="Tue May 08 2018 05:03:38 GMT+0800">
+        <meta property="article:modified_time" content="Tue May 08 2018 05:14:39 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/05/02/事件添加和解绑的兼容性写法记录/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/05/02/事件添加和解绑的兼容性写法记录/index.html",
-    "headline": "事件添加和解绑的兼容性写法记录",
-    "datePublished": "Wed May 02 2018 00:57:06 GMT+0800",
-    "dateModified": "Wed May 02 2018 01:50:33 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html",
+    "headline": "缓动动画框架简易版本封装二",
+    "datePublished": "Tue May 08 2018 05:03:38 GMT+0800",
+    "dateModified": "Tue May 08 2018 05:14:39 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,笔记",
+    "keywords": ",javascript,练习",
     "description": "",
 }
 </script>
@@ -341,15 +341,6 @@
     <!-- Left aligned menu below button -->
     
     
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一-事件添加和解除的三种方法"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.事件添加和解除的三种方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法1："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">方法1：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法2：火狐、谷歌和IE9-支持，IE678不支持"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">方法2：火狐、谷歌和IE9+支持，IE678不支持</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法3：火狐、谷歌和IE9-不支持，IE678支持"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">方法3：火狐、谷歌和IE9+不支持，IE678支持</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件绑定和解除的兼容性写法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">事件绑定和解除的兼容性写法</span></a></li></ol></li></ol>
-    </ul>
-    
 
 
 
@@ -379,7 +370,7 @@
         
     
             <p class="article-headline-p">
-                事件添加和解绑的兼容性写法记录
+                缓动动画框架简易版本封装二
             </p>
         </div>
 
@@ -398,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>5月 02, 2018</span>
+        <span>5月 08, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -422,7 +413,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
     </ul>
     
 
@@ -467,88 +458,147 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="一-事件添加和解除的三种方法"><a href="#一-事件添加和解除的三种方法" class="headerlink" title="一.事件添加和解除的三种方法"></a>一.事件添加和解除的三种方法</h2><h3 id="方法1："><a href="#方法1：" class="headerlink" title="方法1："></a>方法1：</h3><p>添加：</p>
-<p>element.onclick = fn / 匿名函数 ;</p>
-<p>用这种方式绑定事件，新绑定的事件会覆盖前一个同名事件</p>
-<p>解除：</p>
-<p>element.onclick = null;</p>
-<h3 id="方法2：火狐、谷歌和IE9-支持，IE678不支持"><a href="#方法2：火狐、谷歌和IE9-支持，IE678不支持" class="headerlink" title="方法2：火狐、谷歌和IE9+支持，IE678不支持"></a>方法2：火狐、谷歌和IE9+支持，IE678不支持</h3><p>添加：</p>
-<p>element.addEventListener(“click”, fn);</p>
-<p>注意：这里的事件名不加on</p>
-<p>用这种方法绑定事件，前一次同名事件不会被后一次绑定上的事件覆盖，并且是先执行前一次事件后在执行新绑定的事件驱动函数</p>
-<p>解除：</p>
-<p>element.removeEventListener(“click”, fn);</p>
-<h3 id="方法3：火狐、谷歌和IE9-不支持，IE678支持"><a href="#方法3：火狐、谷歌和IE9-不支持，IE678支持" class="headerlink" title="方法3：火狐、谷歌和IE9+不支持，IE678支持"></a>方法3：火狐、谷歌和IE9+不支持，IE678支持</h3><p>添加：</p>
-<p>element.attachEvent(“onclick”,  fn);</p>
-<p>注意：这里的事件名有on</p>
-<p>这种方式绑定事件也是不会覆盖前一次同名事件</p>
-<p>解除：</p>
-<p>element.detachEvent(“onclick”,  fn);</p>
-<h3 id="事件绑定和解除的兼容性写法"><a href="#事件绑定和解除的兼容性写法" class="headerlink" title="事件绑定和解除的兼容性写法"></a>事件绑定和解除的兼容性写法</h3><p>为了提高代码在更多浏览器上的兼容性，我们可以使用以下的兼容性写法</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-    <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> button <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <p>这次的缓动动画封装升级部分如下：</p>
+<ol>
+<li>传入一个json，可在动画中变化多个属性</li>
+<li>针对透明度和层级做了优化</li>
+<li>针对清除定时器做了优化</li>
+<li>可传递回调函数</li>
+</ol>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>head<span class="token operator">></span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>title<span class="token operator">></span>缓动框架回调函数复习<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
+    <span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
+        <span class="token operator">*</span> <span class="token punctuation">{</span>
+            margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            padding<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        div <span class="token punctuation">{</span>
+            width<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+            height<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+            border<span class="token punctuation">:</span> 3px solid #<span class="token number">666</span><span class="token punctuation">;</span>
+            border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 53px<span class="token punctuation">;</span>
+            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+            top<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+            left<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            background<span class="token punctuation">:</span> #64FFDA<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        #box2 <span class="token punctuation">{</span>
+            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+            top<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+            left<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+            width<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+            height<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
+            background<span class="token punctuation">:</span> #<span class="token number">999</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+    <span class="token operator">&lt;</span>button<span class="token operator">></span>会变来变去<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>button<span class="token operator">></span>回到原处圆形<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box2"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
 
-    <span class="token comment" spellcheck="true">//ff,chrome,ie9+不支持attachEvent(), ie678不支持addEventListener,</span>
-    <span class="token comment" spellcheck="true">//所以兼容写法，是把两个方法一起放入一个对象的方法中，然后由对象调用里面的添加事件方法</span>
-    <span class="token keyword">var</span> EventListener <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//参数分别是事件源，事件名（不带on)和事件驱动程序</span>
-        addEvent<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>ele<span class="token punctuation">,</span> str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//如果浏览器支持某个方法，这个表达式就是true</span>
-            <span class="token comment" spellcheck="true">//也就是说如果这个浏览器支持addEventListener方法的话，</span>
-            <span class="token comment" spellcheck="true">//就会进去这个代码块执行自己支持的方法</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>ele<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                ele<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ele<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                ele<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"on"</span> <span class="token operator">+</span> str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//既不支持addEventListener也不支持attachEvent的选项</span>
-                <span class="token comment" spellcheck="true">//可以先记录下来之前同名事件的函数</span>
-                    <span class="token keyword">var</span> oldEvent <span class="token operator">=</span> ele<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>str<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    ele<span class="token punctuation">[</span><span class="token string">"on"</span> <span class="token operator">+</span> str<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//如果之前存在同名事件绑定</span>
-                        <span class="token keyword">if</span> <span class="token punctuation">(</span>oldEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//就先执行之前绑定的事件</span>
-                        <span class="token function">oldEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
+        <span class="token comment" spellcheck="true">//老三步</span>
+        <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//给 按钮绑上点击事件</span>
+        btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> json1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
+                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">170</span><span class="token punctuation">,</span>
+                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> json2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
+                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
+                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+            <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json1<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json2<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">//封装一个缓动动画框架，参数分别是要动的盒子，传入的样式json,和回调函数</span>
+        <span class="token keyword">function</span> <span class="token function">animate</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> json<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//用前清理定时器</span>
+            <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ele<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//通过开闭原则来为后续清理定时器做准备</span>
+                <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">var</span> leader<span class="token punctuation">;</span>
+                    <span class="token comment" spellcheck="true">//如果属性是透明度的话做特殊处理</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">//由于透明的的值是小数，计算会有误差，所以将其*100</span>
+                        leader <span class="token operator">=</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">||</span> <span class="token number">100</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        leader <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                    <span class="token comment" spellcheck="true">//步长和二次处理</span>
+                    <span class="token keyword">var</span> step <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>
+                    step <span class="token operator">=</span> step <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span> <span class="token punctuation">:</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                    <span class="token comment" spellcheck="true">//赋值（注意透明度和层级）</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"zIndex"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">//层级不作缓动处理，直接赋值</span>
+                        ele<span class="token punctuation">.</span>style<span class="token punctuation">.</span>zIndex <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>leader <span class="token operator">+</span> step<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> leader <span class="token operator">+</span> step <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+
+                    <span class="token comment" spellcheck="true">//清理定时器第一步</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">></span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">//在这里判断是否还有属性需要继续向目标值移动，如果有，</span>
+                        <span class="token comment" spellcheck="true">//就将标识符改为false，阻止之后的清理定时器</span>
+                        flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token comment" spellcheck="true">//清理定时器第二步</span>
+                <span class="token comment" spellcheck="true">//这里可以在控制台看是否清除了定时器</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment" spellcheck="true">//这里是为了防止一些含有小数的目标值走不到位</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
                         <span class="token punctuation">}</span>
-                        <span class="token comment" spellcheck="true">//再执行新绑定的事件驱动程序，</span>
-                        <span class="token comment" spellcheck="true">//如果之前不存在同名事件，直接执行新绑定的事件驱动函数</span>
+                    <span class="token punctuation">}</span>
+
+                    <span class="token comment" spellcheck="true">//回调函数部分</span>
+                    <span class="token comment" spellcheck="true">//如果有回调函数就在上一个函数所有变化都结束后进行</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                         <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                     <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>，
-        <span class="token comment" spellcheck="true">//解除事件绑定部分,与绑定事件方法兼容性写法同理</span>
-        removeEvent<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>ele<span class="token punctuation">,</span> str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>ele<span class="token punctuation">.</span>removeEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                ele<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span>str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>ele<span class="token punctuation">.</span>detachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                ele<span class="token punctuation">.</span><span class="token function">detachEvent</span><span class="token punctuation">(</span><span class="token string">"on"</span> <span class="token operator">+</span> str<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+                <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">//先封装一个获取属性函数</span>
+        <span class="token keyword">function</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> attr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>getComputedStyle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                ele<span class="token punctuation">[</span><span class="token string">"on"</span> <span class="token operator">+</span> str<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//兼容IE678</span>
+                <span class="token keyword">return</span> ele<span class="token punctuation">.</span>currentStyle<span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 
-
-    EventListener<span class="token punctuation">.</span><span class="token function">addEvent</span><span class="token punctuation">(</span>button<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> f1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    EventListener<span class="token punctuation">.</span><span class="token function">addEvent</span><span class="token punctuation">(</span>button<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    EventListener<span class="token punctuation">.</span><span class="token function">removeEvent</span><span class="token punctuation">(</span>button<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    EventListener<span class="token punctuation">.</span><span class="token function">removeEvent</span><span class="token punctuation">(</span>button<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>    
-
-    <span class="token comment" spellcheck="true">//这里有一个需要补充的点：用什么方式绑定就用什么方式解除绑定，</span>
-    <span class="token comment" spellcheck="true">//比如用addEventListener绑定的事件无法用null方法来解绑</span>
-    <span class="token keyword">function</span> f1 <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"powderblue"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">var</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-    <span class="token keyword">function</span> f2 <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            box<span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"navy"</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -569,21 +619,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/04/匀速动画和缓动动画简易封装笔记/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/04/28/节点访问关系与函数封装练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/04/匀速动画和缓动动画简易封装笔记/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
