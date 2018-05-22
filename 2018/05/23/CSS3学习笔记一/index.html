@@ -43,7 +43,7 @@
     
     <title>
         
-            分类: JavaScript | 
+            CSS3学习笔记一 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/categories/JavaScript/page/2/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/23/CSS3学习笔记一/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/categories/JavaScript/page/2/">
+    <meta property="og:url" content="http://yoursite.com/2018/05/23/CSS3学习笔记一/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: JavaScript | Yansuuu&#39;s blog">
+    <meta property="og:title" content="CSS3学习笔记一 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="笔记"> 
 
+    
+        <meta property="article:published_time" content="Wed May 23 2018 05:26:15 GMT+0800">
+        <meta property="article:modified_time" content="Wed May 23 2018 06:07:33 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/JavaScript/page/2/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/23/CSS3学习笔记一/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/23/CSS3学习笔记一/index.html",
+    "headline": "CSS3学习笔记一",
+    "datePublished": "Wed May 23 2018 05:26:15 GMT+0800",
+    "dateModified": "Wed May 23 2018 06:07:33 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Yansuuu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/cointoss-avtar-2.png"
+        },
+        "description": "人生一度きい"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yansuuu&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/cointoss-favicon.png"
+        }
+    },
+    "keywords": ",笔记",
+    "description": "",
+}
+</script>
 
 
     
@@ -285,104 +318,279 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#A-选择器"><span class="post-toc-number">1.</span> <span class="post-toc-text">A.选择器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-属性选择器"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.属性选择器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-伪类选择器"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.伪类选择器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-伪元素选择器"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.伪元素选择器</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#B-新增颜色模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">B. 新增颜色模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-透明度问题"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.透明度问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-rgba-hsla"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.rgba()/hsla()</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#a-rgba"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">a.rgba()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#b-hsla"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">b.hsla()</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#c-text-shadow文本阴影"><span class="post-toc-number">3.</span> <span class="post-toc-text">c.text-shadow文本阴影</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#D-盒模型-box-sizing"><span class="post-toc-number">4.</span> <span class="post-toc-text">D.盒模型 box-sizing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-box-sizing-content-box"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">1.box-sizing: content-box;</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-box-sizing-border-box"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">2.box-sizing: border-box;</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#E-浏览器私有前缀（为了兼容性）"><span class="post-toc-number">5.</span> <span class="post-toc-text">E.浏览器私有前缀（为了兼容性）</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 7 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/04/21/根据年月日得出一年第几天的Js简单实现及优化/">输入某年某月某日，判断这一天是这一年的第几天？</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            提示： 4年一润，百年不润，400又润
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/04/21/根据年月日得出一年第几天的Js简单实现及优化/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/cointoss-avtar-2.png" width="44px" height="44px" alt="Yansuuu's avatar">
-            </div>
-            <div>
-                <strong>Yansuuu</strong>
-                <span>4月 21, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaScript/">JavaScript</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/categories/JavaScript/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/categories/JavaScript/">1</a><span class="page-number current">2</span>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 7 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                CSS3学习笔记一
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cointoss-avtar-2.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Yansuuu</strong>
+        <span>5月 23, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/笔记/">笔记</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="A-选择器"><a href="#A-选择器" class="headerlink" title="A.选择器"></a>A.选择器</h1><h2 id="1-属性选择器"><a href="#1-属性选择器" class="headerlink" title="1.属性选择器"></a>1.属性选择器</h2><ul>
+<li>E[attr]  含有该属性的E元素</li>
+<li>E[attr=val] 含有该属性，且属性值完全等于val的E元素</li>
+<li>E[attr*=val] 属性值包含val就可以了</li>
+<li>E[attr^=val] 属性值开头含有val就可以了</li>
+<li>E[attr$=val]   属性值结尾有val就可以了</li>
+</ul>
+<h2 id="2-伪类选择器"><a href="#2-伪类选择器" class="headerlink" title="2.伪类选择器"></a>2.伪类选择器</h2><p>伪类选择器的标志是  ：</p>
+<ul>
+<li>E:first-child   找到E元素的父元素中的第一个子元素，要求第一个子元素必须是E元素，否则谁都选不了</li>
+<li>E:flast-child  同上，父元素中最后一个子元素</li>
+<li>E:nth-child(n) 同上，n为0,1,2,3,4……，n&lt;=0就无效，然后可以根据2n/2n-1/7n等各种组合来获取目标值，-n+5指的是前五个E元素     还可以填写odd/even来规定奇数、偶数项的样式</li>
+<li>E:nth-last-child(n) 同上，只不过是从后往前，-n+5是倒数5个</li>
+<li>E:first-of-type  也是找到E元素的父元素，让后根据E的类型查找序列，也就是说就是第一个E元素，与父元素第一个子元素是谁无关</li>
+<li>E:last-of-type 同上，最后一个子元素E</li>
+<li>E:nth-of-type(n)</li>
+<li>E:nth-last-of-type(n)</li>
+<li>E:empty   选择完全不含有子元素的E元素</li>
+<li>E:target  这个选择器要配合锚标签，锚点被激活时样式更换成这个伪类样式</li>
+</ul>
+<h2 id="3-伪元素选择器"><a href="#3-伪元素选择器" class="headerlink" title="3.伪元素选择器"></a>3.伪元素选择器</h2><p>伪元素标志是   ::</p>
+<p>所谓的伪元素就是和html元素功能完全一致，但是不会在DOM树上生成节点</p>
+<p>并且所有伪元素都是行内元素，经常要配合display/position/float来设置宽高</p>
+<ul>
+<li><p>::before和::after在css2中是伪类，在css3中是伪元素</p>
+<ol>
+<li>这两个伪类必须要写content属性，即使无需添加内容也需要写content:””<ol start="2">
+<li>设置宽高需要转换为块级元素或者行内块</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>::first-letter  第一个字母或文字，如果需要首字母下沉，需要浮动</li>
+<li>::first-line 第一行，会自适应父盒子宽高的变化</li>
+<li>::selection 选中的文本，可设置color和background，但是无法这是内容大小</li>
+</ul>
+<h1 id="B-新增颜色模式"><a href="#B-新增颜色模式" class="headerlink" title="B. 新增颜色模式"></a>B. 新增颜色模式</h1><h2 id="1-透明度问题"><a href="#1-透明度问题" class="headerlink" title="1.透明度问题"></a>1.透明度问题</h2><ul>
+<li>opacity：可以改变透明程度，但是会影响其他属性和子元素</li>
+<li>transparent ：就是透明，无法更改透明程度，不会影响其他属性和子元素</li>
+<li>rgba/hsla：能改变透明程度，也不会影响其他属性和子元素</li>
+</ul>
+<h2 id="2-rgba-hsla"><a href="#2-rgba-hsla" class="headerlink" title="2.rgba()/hsla()"></a>2.rgba()/hsla()</h2><h3 id="a-rgba"><a href="#a-rgba" class="headerlink" title="a.rgba()"></a>a.rgba()</h3><ul>
+<li>r - red 0-255</li>
+<li>g green 0-255</li>
+<li>b blue 0-255</li>
+<li>a alpha 0-1</li>
+</ul>
+<p>rbg也可以设置百分数，但是兼容性不好</p>
+<h3 id="b-hsla"><a href="#b-hsla" class="headerlink" title="b.hsla()"></a>b.hsla()</h3><ul>
+<li>h hue色度 0-360 0/360-red 120green 240-blue</li>
+<li>s saturation饱和度 0.0%-100.0%</li>
+<li>l lightness 0.0%-100.0%</li>
+<li>a  alpha 0-1</li>
+</ul>
+<h1 id="c-text-shadow文本阴影"><a href="#c-text-shadow文本阴影" class="headerlink" title="c.text-shadow文本阴影"></a>c.text-shadow文本阴影</h1><p>text-shadow: offsetX offsetY blur color</p>
+<p>分别是水平位移，垂直位移 模糊程度 和阴影颜色</p>
+<p>下右为正，上左为负；blur没有负数</p>
+<p>可设置多个阴影，用,隔开</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">p </span><span class="token punctuation">{</span>
+    <span class="token property">text-shadow</span><span class="token punctuation">:</span> -<span class="token number">3</span>px -<span class="token number">3</span>px <span class="token number">3</span>px <span class="token hexcode">#fff</span>, <span class="token number">3</span>px <span class="token number">3</span>px <span class="token number">3</span>px <span class="token hexcode">#000</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>​    </p>
+<h1 id="D-盒模型-box-sizing"><a href="#D-盒模型-box-sizing" class="headerlink" title="D.盒模型 box-sizing"></a>D.盒模型 box-sizing</h1><h2 id="1-box-sizing-content-box"><a href="#1-box-sizing-content-box" class="headerlink" title="1.box-sizing: content-box;"></a>1.box-sizing: content-box;</h2><p>外增模式：盒子会因为border和padding撑大</p>
+<p>盒子真实大小 = border + padding + width</p>
+<h2 id="2-box-sizing-border-box"><a href="#2-box-sizing-border-box" class="headerlink" title="2.box-sizing: border-box;"></a>2.box-sizing: border-box;</h2><p>内减模式：盒子不会因为border和padding撑大，而是向内压缩内容区大小，也就说width和height不会改变</p>
+<p>width/height = border + padding + 内容区宽高</p>
+<h1 id="E-浏览器私有前缀（为了兼容性）"><a href="#E-浏览器私有前缀（为了兼容性）" class="headerlink" title="E.浏览器私有前缀（为了兼容性）"></a>E.浏览器私有前缀（为了兼容性）</h1><ul>
+<li>-webkit- :chrome safari</li>
+<li>-moz- : firefox</li>
+<li>-ms-: ie</li>
+<li>-o- : opera</li>
+<li>还要写一个什么都不加的</li>
+</ul>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector">div </span><span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>left, red, blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-moz-linear-gradient</span><span class="token punctuation">(</span>left, red, blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-ms-linear-gradient</span><span class="token punctuation">(</span>left, red, blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">-o-linear-gradient</span><span class="token punctuation">(</span>left, red, blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>left, red, blue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>​    </p>
+<p>​    </p>
+<p>​    </p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/05/22/html5dom新增操作练习/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
