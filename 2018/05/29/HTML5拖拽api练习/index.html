@@ -43,7 +43,7 @@
     
     <title>
         
-            节点访问关系与函数封装练习 | 
+            HTML5拖拽api练习 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/04/28/节点访问关系与函数封装练习/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/29/HTML5拖拽api练习/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/04/28/节点访问关系与函数封装练习/">
+    <meta property="og:url" content="http://yoursite.com/2018/05/29/HTML5拖拽api练习/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="节点访问关系与函数封装练习 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="HTML5拖拽api练习 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
     <meta property="og:article:tag" content="练习"> 
 
     
-        <meta property="article:published_time" content="Sat Apr 28 2018 02:11:49 GMT+0800">
-        <meta property="article:modified_time" content="Sat Apr 28 2018 02:23:55 GMT+0800">
+        <meta property="article:published_time" content="Tue May 29 2018 04:16:18 GMT+0800">
+        <meta property="article:modified_time" content="Tue May 29 2018 04:55:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/04/28/节点访问关系与函数封装练习/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/29/HTML5拖拽api练习/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/04/28/节点访问关系与函数封装练习/index.html",
-    "headline": "节点访问关系与函数封装练习",
-    "datePublished": "Sat Apr 28 2018 02:11:49 GMT+0800",
-    "dateModified": "Sat Apr 28 2018 02:23:55 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/29/HTML5拖拽api练习/index.html",
+    "headline": "HTML5拖拽api练习",
+    "datePublished": "Tue May 29 2018 04:16:18 GMT+0800",
+    "dateModified": "Tue May 29 2018 04:55:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -347,7 +347,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对节点的访问关系和函数简单封装做了个练习"><span class="post-toc-number">1.</span> <span class="post-toc-text">对节点的访问关系和函数简单封装做了个练习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#0-html文档部分"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">0.html文档部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-封装document-getElementById"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1.封装document.getElementById()</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本一："><span class="post-toc-number">1.</span> <span class="post-toc-text">版本一：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本二："><span class="post-toc-number">2.</span> <span class="post-toc-text">版本二：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本三："><span class="post-toc-number">3.</span> <span class="post-toc-text">版本三：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#a版本：for循环版本"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">a版本：for循环版本</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#b版本：使用事件对象和事件委托"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">b版本：使用事件对象和事件委托</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#c-关于e-dataTransfer"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">c.关于e.dataTransfer</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -379,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                节点访问关系与函数封装练习
+                HTML5拖拽api练习
             </p>
         </div>
 
@@ -398,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>4月 28, 2018</span>
+        <span>5月 29, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -467,131 +467,153 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="对节点的访问关系和函数简单封装做了个练习"><a href="#对节点的访问关系和函数简单封装做了个练习" class="headerlink" title="对节点的访问关系和函数简单封装做了个练习"></a>对节点的访问关系和函数简单封装做了个练习</h2><h3 id="0-html文档部分"><a href="#0-html文档部分" class="headerlink" title="0.html文档部分"></a>0.html文档部分</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <p>分别写了三个版本的拖拽案例</p>
+<p>这是html部分</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>访问关系封装练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>拖拽案例练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css">
-        <span class="token selector">li </span><span class="token punctuation">{</span>
-            <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
-            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
-            <span class="token property">background</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span>
-            <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+        <span class="token selector">div </span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">2</span>px solid <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+            <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">p </span><span class="token punctuation">{</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+            <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span>  <span class="token number">10</span>px<span class="token punctuation">;</span>
+            <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#64FFDA</span><span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">3</span>px solid <span class="token hexcode">#ddd</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>toolsex.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+        <span class="token comment" spellcheck="true">&lt;!-- 除了链接和图片其他元素如果需要拖拽都需要加上属性 darggable=“true" --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">draggable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>"拖拽练习"1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">draggable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>"拖拽练习"2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">draggable</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>"拖拽练习"3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-        //利用自己封装的函数来操作节点
-        var box = getEle("box");
-        box.style.backgroundColor = "olive";
+        //版本一，为每一个需要拖拽的元素绑上drag/dragstart/dragend/dragleave 
+        // 给每个目标元素绑上 dragenter/dragover/dragleave/drop
+        // 非常繁琐
+        var p1 = document.querySelector("p");
+        var div2 = document.querySelectorAll("div")[1];
 
-        //前后兄弟节点操作
-        getNextNode(box).style.backgroundColor = "blue";
-        getPrevNode(box).style.backgroundColor = "orange";
-
-
-        //单个子节点操作
-        var parent = box.parentNode;
-        getFirstChild(parent).style.backgroundColor = "red";
-        getLastChild(parent).style.backgroundColor = "green";
-
-        //获得指定兄弟节点
-        getEleByIndex(box, 0).style.backgroundColor = "#123";
-        getEleByIndex(box, 1).style.backgroundColor  = "#432";
-
-        //获取所有的兄弟节点（意味着除了自己的平级节点数组）
-        var siblingsArr = getAllSiblings(box);
-        for (var i = 0; i &lt; siblingsArr.length; i++) {
-            siblingsArr[i].style.backgroundColor = "powderblue";
+        //浏览器默认阻止拖拽行为，要在dropover里取消默认行为
+        div2.ondragover = function (e) {
+            e.preventDefault();
+        }
+        div2.ondrop = function () {
+            this.appendChild(p1);
         }
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>下面是js文档部分</p>
-<h3 id="1-封装document-getElementById"><a href="#1-封装document-getElementById" class="headerlink" title="1.封装document.getElementById()"></a>1.封装document.getElementById()</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
-*功能：根据id获取元素节点
-*@para:id
-*
-*/</span>
-<span class="token keyword">function</span> <span class="token function">getEle</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="版本一："><a href="#版本一：" class="headerlink" title="版本一："></a>版本一：</h2><p>最原始版本，最繁琐，如果要实现每一个p都可以拖入每一个div里的话需要一个一个绑上事件</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> div2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//浏览器默认阻止拖拽行为，要在dropover里取消默认行为</span>
+div2<span class="token punctuation">.</span>ondragover <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>###2.封装获取previousElementSibling/nextElementSibling</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
-*功能：获得前一个和后一个兄弟节点
-*
-*/</span>
-<span class="token keyword">function</span> <span class="token function">getNextNode</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//兼容写法</span>
-    <span class="token keyword">return</span> ele<span class="token punctuation">.</span>nextElementSibling <span class="token operator">||</span> ele<span class="token punctuation">.</span>nextSibling<span class="token punctuation">;</span>
+div2<span class="token punctuation">.</span>ondrop <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>p1<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">function</span> <span class="token function">getPrevNode</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> ele<span class="token punctuation">.</span>previousElementSibling <span class="token operator">||</span> ele<span class="token punctuation">.</span>previousSibling<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="版本二："><a href="#版本二：" class="headerlink" title="版本二："></a>版本二：</h2><p>稍微改良版本，可以将每一个p拖拽到第二个div中，但是不能将p拖入每一个div中</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> p1 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> div2 <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 版本二，可以实现每一个p拖入到第二个盒子中，只要制造一个可以存放拖拽元素的变量</span>
+<span class="token comment" spellcheck="true">// 并且在拖拽开始时记录拖拽元素即可</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 给拖拽目标循环绑上事件,在dragstart事件中记录拖拽元素</span>
+<span class="token keyword">var</span> boxs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> boxs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    boxs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"dragstart"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obj <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>###3.封装获取firstElementSibling/lastElementSibling</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
-*功能：获得第一个子元素节点和最后一个子元素节点
-*
-*/</span>
 
-<span class="token keyword">function</span> <span class="token function">getFirstChild</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//兼容写法</span>
-    <span class="token keyword">return</span> parent<span class="token punctuation">.</span>firstElementChild <span class="token operator">||</span> parent<span class="token punctuation">.</span>firstChild<span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 阻止默认行为</span>
+div2<span class="token punctuation">.</span>ondragover <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+div2<span class="token punctuation">.</span>ondrop <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 添加元素</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 清空obj</span>
+    obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token keyword">function</span> <span class="token function">getLastChild</span><span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> parent<span class="token punctuation">.</span>lastElementChild <span class="token operator">||</span> parent<span class="token punctuation">.</span>lastChild<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="版本三："><a href="#版本三：" class="headerlink" title="版本三："></a>版本三：</h2><p>每一个p都可以拖拽到每一个div中</p>
+<p>也有两个版本，第一个版本利用for循环来做</p>
+<h3 id="a版本：for循环版本"><a href="#a版本：for循环版本" class="headerlink" title="a版本：for循环版本"></a>a版本：for循环版本</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 版本二，可以实现每一个p拖入到第二个盒子中，只要制造一个可以存放拖拽元素的变量</span>
+<span class="token comment" spellcheck="true">// 并且在拖拽开始时记录拖拽元素即可</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 给拖拽目标循环绑上事件,在dragstart事件中记录拖拽元素</span>
+<span class="token keyword">var</span> boxs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> boxs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    boxs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"dragstart"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obj <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>###4.封装获取指定兄弟节点</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
-*功能：获得指定index的兄弟节点,根据一个子节点和所需要兄弟节点的index
-*     随意获取平级的兄弟节点
-*/</span>
-<span class="token keyword">function</span> <span class="token function">getEleByIndex</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> ele<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span>children<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//循环给每一个div元素添加dragover和drop事件</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> divs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 阻止默认行为</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"dragover"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 添加元素</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"drop"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>###5.封装获取所有兄弟节点（注意：这次获取的是一个数组）</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/**
-*功能：获得所有的兄弟节点
-*/</span>
-<span class="token keyword">function</span> <span class="token function">getAllSiblings</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//返回父节点的所有子元素节点，包括自己</span>
-    <span class="token keyword">var</span> arrAll <span class="token operator">=</span> ele<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//声明一个空数组，把自己的兄弟节点都放进去</span>
-    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> 
-    <span class="token comment" spellcheck="true">//如果获得自己的兄弟节点呢，</span>
-    <span class="token comment" spellcheck="true">//就是把获得那个子元素数组中自己撇除，把不是自己的都塞进新数组</span>
-    <span class="token comment" spellcheck="true">//使用for遍历一下arrAll</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arrAll<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//判断一下是不是自己</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arrAll<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> ele<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//用数组的push方法就很酷</span>
-            arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arrAll<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//不酷的方法</span>
-            <span class="token comment" spellcheck="true">// arr[arr.length] = arrAll[i];</span>
-        <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="b版本：使用事件对象和事件委托"><a href="#b版本：使用事件对象和事件委托" class="headerlink" title="b版本：使用事件对象和事件委托"></a>b版本：使用事件对象和事件委托</h3><p>也需要循环，但是无需获取p的dom节点，而是用e.target来获取</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span>  <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> divs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 使用事件委托和对象</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ondragstart <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// e.target就是触发事件的target元素</span>
+        obj <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 取消默认行为</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ondragover <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 添加元素</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>ondrop <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        obj <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">//忘记return这个新数组的话，你什么都得不到！！！</span>
-    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="c-关于e-dataTransfer"><a href="#c-关于e-dataTransfer" class="headerlink" title="c.关于e.dataTransfer"></a>c.关于e.dataTransfer</h3><p>e.dataTransfer.setData(“text/html”/“text/uri-list”, BLOB)；</p>
+<p>e.dataTransfer.getData(“text/html”);</p>
+<p>我可以给每一个p一个id值</p>
+<p>然后在dragstart事件中通过e.target.id获取它，并存在e.dataTransfer.setData(“text/html”, e.target.id)中</p>
+<p>之后再drop事件中（且只能在drop事件中获取setData中的数据）通过e.dataTransfer.getData(“text/html”)来获取这个id，之后通过document.getElementById(id)来获取拖拽元素</p>
+<p>当然这个方法远没有上面 两个版本方便，作为了解知道</p>
+<p>并且还存在一个bug，由于在drop事件中传入了e事件对象，所以使用this来添加元素就不可以了，需要通过e.currentTarget来添加，不然拖拽元素也可以作为目标元素了</p>
 
         
     
@@ -612,21 +634,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/02/事件添加和解绑的兼容性写法记录/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/04/27/tab栏切换练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/05/23/CSS3学习笔记一/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
