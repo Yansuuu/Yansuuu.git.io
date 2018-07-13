@@ -43,7 +43,7 @@
     
     <title>
         
-            预解析hoist问题练习 | 
+            斐波那契递归函数性能问题和解决 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,练习">
+    <meta name="keywords" content=",javascript,笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/13/预解析hoist问题练习/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/14/斐波那契递归函数性能问题和解决/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/07/13/预解析hoist问题练习/">
+    <meta property="og:url" content="http://yoursite.com/2018/07/14/斐波那契递归函数性能问题和解决/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="预解析hoist问题练习 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="斐波那契递归函数性能问题和解决 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Fri Jul 13 2018 00:46:04 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jul 13 2018 00:47:34 GMT+0800">
+        <meta property="article:published_time" content="Sat Jul 14 2018 03:52:16 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jul 14 2018 04:27:34 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/07/13/预解析hoist问题练习/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/07/14/斐波那契递归函数性能问题和解决/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/07/13/预解析hoist问题练习/index.html",
-    "headline": "预解析hoist问题练习",
-    "datePublished": "Fri Jul 13 2018 00:46:04 GMT+0800",
-    "dateModified": "Fri Jul 13 2018 00:47:34 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/07/14/斐波那契递归函数性能问题和解决/index.html",
+    "headline": "斐波那契递归函数性能问题和解决",
+    "datePublished": "Sat Jul 14 2018 03:52:16 GMT+0800",
+    "dateModified": "Sat Jul 14 2018 04:27:34 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,练习",
+    "keywords": ",javascript,笔记",
     "description": "",
 }
 </script>
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#斐波那契递归函数的性能问题"><span class="post-toc-number">1.</span> <span class="post-toc-text">斐波那契递归函数的性能问题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#斐波那契性能问题解决—缓存数组"><span class="post-toc-number">2.</span> <span class="post-toc-text">斐波那契性能问题解决—缓存数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方式1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">解决方式1</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方式2：对方式一的改进，将缓存数组也封装进函数中"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">解决方式2：对方式一的改进，将缓存数组也封装进函数中</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方式3：将创建缓存容器单独封装一个方法"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">解决方式3：将创建缓存容器单独封装一个方法</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -370,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                预解析hoist问题练习
+                斐波那契递归函数性能问题和解决
             </p>
         </div>
 
@@ -389,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>7月 13, 2018</span>
+        <span>7月 14, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -413,7 +422,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -458,157 +467,111 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">/*//1.
-        function foo() {
-            var num = 123;
-            console.log(num); 
-        }
-        foo();
-        console.log(num);
+        <h1 id="斐波那契递归函数的性能问题"><a href="#斐波那契递归函数的性能问题" class="headerlink" title="斐波那契递归函数的性能问题"></a>斐波那契递归函数的性能问题</h1><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//利用count来记录fib函数调用次数</span>
+<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    count<span class="token operator">++</span>；
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fib</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//6765</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//13529</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>仅计算20项就已经 调用了函数一万三千次之多，当n更大时，计算次数将会更加增多，会造成大量的资源浪费。</p>
+<p>造成资源浪费的原因：重复计算次数过多</p>
+<p>fib(6)时需要计算fib(5),fib(4),而fib(5)本身计算有需要再次计算一遍fib(4),以此可知会出现大量的重复计算</p>
+<h1 id="斐波那契性能问题解决—缓存数组"><a href="#斐波那契性能问题解决—缓存数组" class="headerlink" title="斐波那契性能问题解决—缓存数组"></a>斐波那契性能问题解决—缓存数组</h1><h2 id="解决方式1"><a href="#解决方式1" class="headerlink" title="解决方式1"></a>解决方式1</h2><p>创建一个数组，计算之前先去数组中查找数据，如果找到就直接使用，如果找不到就计算并将计算结果存入数组中 再返回结果</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> cache <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//先去数组中查找数据</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//数组中没有，就接着计算</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//将记过存入数组</span>
+        cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> temp <span class="token operator">=</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//存入数组</span>
+    cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">fib</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//6765</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//37次</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>大大减少了重复计算，提高了性能</p>
+<p>计算fib(5)时，需要计算fib(4)和fib(3),而fib(4)需要fib(3)和fib(2)，这里面的数据在计算fib(3)是都已经计算过了，直接去数组中获取就可以了，无需再次计算从而减少了计算量</p>
+<h2 id="解决方式2：对方式一的改进，将缓存数组也封装进函数中"><a href="#解决方式2：对方式一的改进，将缓存数组也封装进函数中" class="headerlink" title="解决方式2：对方式一的改进，将缓存数组也封装进函数中"></a>解决方式2：对方式一的改进，将缓存数组也封装进函数中</h2><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">createFib</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> cache <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        count<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> temp <span class="token operator">=</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cache<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> fib<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> myFib <span class="token operator">=</span> <span class="token function">createFib</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//此时计算20项只需要计算37次，大大减少了及三两</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">myFib</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        //-----提升
-        function foo() {
-            var num;
-            num = 123;
-            console.log(num);
-        }
-        foo(); //123;
-        console.log(num); //is not defined;*/</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="解决方式3：将创建缓存容器单独封装一个方法"><a href="#解决方式3：将创建缓存容器单独封装一个方法" class="headerlink" title="解决方式3：将创建缓存容器单独封装一个方法"></a>解决方式3：将创建缓存容器单独封装一个方法</h2><pre class="line-numbers language-javascript"><code class="language-javascript">
+        <span class="token comment" spellcheck="true">// 单独创建一个创建缓存容器的方法</span>
+        <span class="token keyword">function</span> <span class="token function">createCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> cache <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">//通过闭包让外界可以访问内部cache</span>
+            <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//如果传了value参数，说明是设置操作</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//没有传value参数是获取操作</span>
+                    <span class="token keyword">return</span> cache<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//在createFib函数中使用创建缓存容器的函数</span>
+        <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">function</span> <span class="token function">createFib</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> fibCache <span class="token operator">=</span> <span class="token function">createCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">function</span> <span class="token function">fib</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                count<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">fibCache</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> <span class="token function">fibCache</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">fibCache</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">var</span> temp <span class="token operator">=</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>n <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">fibCache</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> temp<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">return</span> fib<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> myFib <span class="token operator">=</span> <span class="token function">createFib</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//此时计算20项只需要计算37次，大大减少了及三两</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">myFib</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token comment" spellcheck="true">//2. </span>
-        <span class="token comment" spellcheck="true">/*var scope = "global";
-        foo();
-        function foo() {
-            console.log(scope); //？
-            var scope = "local";
-            console.log(scope); //？
-        }
-
-        //-----提升
-        var scope;
-        function foo() {
-            var scope;
-            console.log(scope); //undefined
-            scope = "local";
-            console.log(scope); //local;
-        }
-        scope = "global";
-        foo();*/</span>
-
-
-        <span class="token comment" spellcheck="true">//3.</span>
-        <span class="token comment" spellcheck="true">/*function f1(){
-            var a;
-            if("a" in window){
-                var a = 10;
-            }
-            alert(a);
-        }
-        f1(); //undefined ,全局变量没有a,但是函数内的局部变量有声明但没有赋值的a;*/</span>
-
-        <span class="token comment" spellcheck="true">//4.</span>
-        <span class="token comment" spellcheck="true">/*//4.1
-        if("a" in window){
-            var a = 10;
-        }
-        alert(a); // ?
-        //---hoist
-        //js中没有块级作用域
-        var a;
-        if("a" in window){
-            a = 10;
-        }
-        alert(a); //10*/</span>
-
-        <span class="token comment" spellcheck="true">//4.2</span>
-       <span class="token comment" spellcheck="true">/* if(!"a" in window){
-            var a = 10;
-        }
-        alert(a); // undefined;
-        //----hoist
-        var a;
-        if(!"a" in window){
-            //无法进入改判断体内所以没有赋值;
-            a = 10;
-        }
-        alert(a); // undefined;*/</span>
-
-
-       <span class="token comment" spellcheck="true">// 5.</span>
-       <span class="token comment" spellcheck="true">/*var foo = 1;
-       function bar() {
-           if(!foo) {
-               var foo = 10;
-           }
-           alert(foo); //??10
-       }
-       bar();
-
-       // 、、---hoist
-       var foo;
-       function bar() {
-               var foo; //undefined
-            if(!foo) {
-                // !foo === true;
-                // foo进入到代码块中
-                foo = 10;
-            }
-            alert(foo); //10
-       }
-       // 这个foo是全局变量，函数中的作用域有了同名变量并不会再向上访问了；
-       foo = 1; 
-       bar();*/</span>
-
-       <span class="token comment" spellcheck="true">// 6.</span>
-      <span class="token comment" spellcheck="true">/* function Foo() {
-           getName = function(){ alert(1); };
-           return this;
-       }
-
-       Foo.getName = function() { alert(2); };
-       Foo.prototype.getName = function(){ alert(3); };
-       var getName = function() { alert(4); };
-       function getName(){ alert(5); }
-
-       Foo.getName(); 
-       getName(); 
-       Foo().getName(); 
-       getName();  
-       new Foo.getName(); 
-       new Foo().getName(); 
-       new new Foo().getName(); 
-
-       // ----hoist
-       function Foo() {
-           getName = function(){ alert(1); };
-           return this;
-       }
-       function getName(){ alert(5); }
-       var getName;
-
-       //给Foo添加方法
-       Foo.getName = function() { alert(2); };
-       //给Foo构造函数的原型添加方法；
-       Foo.prototype.getName = function(){ alert(3); };
-       //有了同名函数不提升变量声明；
-       getName = function() { alert(4); };
-
-
-       Foo.getName(); //2;
-       getName(); //4；
-       Foo().getName(); //调用了函数Foo之后对再次赋值getName，1
-       getName();  //1
-
-       // 这里有个执行顺序问题，先执行Foo.getName(),再new
-       new Foo.getName(); //2
-       //这里的执行顺序：先new Foo(),再getName();
-       //实例对象.getName()，到原型里去找
-       new Foo().getName(); //3
-
-       // 原型链找到Foo.prototype上的的getName
-       new new Foo().getName(); //3*/</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -629,21 +592,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/07/14/闭包练习/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/07/10/递归函数练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/14/闭包练习/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
