@@ -43,7 +43,7 @@
     
     <title>
         
-            分类: 移动web | 
+            上下文函数调用模式练习 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",javascript,练习">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/categories/JavaScript/移动web/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/15/上下文函数调用模式练习/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/categories/JavaScript/移动web/">
+    <meta property="og:url" content="http://yoursite.com/2018/07/15/上下文函数调用模式练习/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="分类: 移动web | Yansuuu&#39;s blog">
+    <meta property="og:title" content="上下文函数调用模式练习 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
 
+    
+        <meta property="article:published_time" content="Sun Jul 15 2018 00:52:45 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jul 15 2018 01:32:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/categories/JavaScript/移动web/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/07/15/上下文函数调用模式练习/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/07/15/上下文函数调用模式练习/index.html",
+    "headline": "上下文函数调用模式练习",
+    "datePublished": "Sun Jul 15 2018 00:52:45 GMT+0800",
+    "dateModified": "Sun Jul 15 2018 01:32:58 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Yansuuu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/cointoss-avtar-2.png"
+        },
+        "description": "人生一度きい"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yansuuu&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/cointoss-favicon.png"
+        }
+    },
+    "keywords": ",javascript,练习",
+    "description": "",
+}
+</script>
 
 
     
@@ -285,100 +318,245 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#练习一：利用apply第二参数是数组的特性练习"><span class="post-toc-number">1.</span> <span class="post-toc-text">练习一：利用apply第二参数是数组的特性练习</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#练习二：伪数组借用数组内置方法练习"><span class="post-toc-number">2.</span> <span class="post-toc-text">练习二：伪数组借用数组内置方法练习</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#练习三：只使用一个循环为页面上所有div和p元素添加上背景色"><span class="post-toc-number">3.</span> <span class="post-toc-text">练习三：只使用一个循环为页面上所有div和p元素添加上背景色</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单写法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">简单写法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#上下文调用函数写法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">上下文调用函数写法</span></a></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 7 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/06/27/移动端单击事件的简单实现/">移动端单击事件的简单实现</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            目的：解决移动端click事件延时问题
-html部分
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/06/27/移动端单击事件的简单实现/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/cointoss-avtar-2.png" width="44px" height="44px" alt="Yansuuu's avatar">
-            </div>
-            <div>
-                <strong>Yansuuu</strong>
-                <span>6月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/JavaScript/">JavaScript</a>, <a class="post_category-link" href="/categories/JavaScript/移动web/">移动web</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 7 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                上下文函数调用模式练习
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cointoss-avtar-2.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Yansuuu</strong>
+        <span>7月 15, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="练习一：利用apply第二参数是数组的特性练习"><a href="#练习一：利用apply第二参数是数组的特性练习" class="headerlink" title="练习一：利用apply第二参数是数组的特性练习"></a>练习一：利用apply第二参数是数组的特性练习</h1><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//1.利用上下文模式比较一个数组中的最大值</span>
+<span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">123</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//apply方法会将第二个参数--数组中的每一项取出来作为单个参数传入调用函数/方法中</span>
+<span class="token comment" spellcheck="true">//.call/apply方法的第一个参数不传、null/undefined时，是函数调用模式，即this指向window</span>
+<span class="token keyword">var</span> maxNum <span class="token operator">=</span> Math<span class="token punctuation">.</span>max<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>maxNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="练习二：伪数组借用数组内置方法练习"><a href="#练习二：伪数组借用数组内置方法练习" class="headerlink" title="练习二：伪数组借用数组内置方法练习"></a>练习二：伪数组借用数组内置方法练习</h1><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//案例：将传入的参数打印，参数之间用-相互连接</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//伪数组是没有函数的方法的，所以利用上下文调用模式来借用函数的方法</span>
+    <span class="token comment" spellcheck="true">//数组的方法在数组的原定对象上</span>
+    <span class="token comment" spellcheck="true">// var str = Array.prototype.join.apply(arguments, ["-"]);</span>
+    <span class="token comment" spellcheck="true">//[]就是一个数组实例，可以直接调用数组原型上的方法</span>
+    <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>join<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arguments<span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">,</span> <span class="token string">"冈田奈奈"</span><span class="token punctuation">,</span> <span class="token number">345</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token string">"村山彩希"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="练习三：只使用一个循环为页面上所有div和p元素添加上背景色"><a href="#练习三：只使用一个循环为页面上所有div和p元素添加上背景色" class="headerlink" title="练习三：只使用一个循环为页面上所有div和p元素添加上背景色"></a>练习三：只使用一个循环为页面上所有div和p元素添加上背景色</h1><p>页面上现在有5个div和8个p元素</p>
+<h2 id="简单写法"><a href="#简单写法" class="headerlink" title="简单写法"></a>简单写法</h2><pre class="line-numbers language-javascript"><code class="language-javascript">window<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">//给页面上的所有div和p添加背景色</span>
+<span class="token comment" spellcheck="true">//传统做法</span>
+<span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> ps <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//都做循环处理，需要做两次循环，因为两个元素伪数组数量不一样</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> divs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    divs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"#aaa"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ps<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ps<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"#aaa"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="上下文调用函数写法"><a href="#上下文调用函数写法" class="headerlink" title="上下文调用函数写法"></a>上下文调用函数写法</h2><p>将两个伪数组合并成一个数组，这样只需要循环一个数组就可以了</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">window<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//给页面上的所有div和p添加背景色</span>
+    <span class="token keyword">var</span> divs <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> ps <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//利用apply第二个参数可以展开数组和伪数组的特性</span>
+    <span class="token comment" spellcheck="true">//apply方法将第二个参数（伪数组或者数组）中每一项都取出来单独作为参数传入调用函数中</span>
+    <span class="token comment" spellcheck="true">//如果直接使用push的话，会将整个数组作为一个参数传入，成为arr的一个项</span>
+    arr<span class="token punctuation">.</span>push<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> divs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">.</span>push<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> ps<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// console.log(arr);</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>backgroundColor <span class="token operator">=</span> <span class="token string">"#aaa"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/07/14/斐波那契递归函数性能问题和解决/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
