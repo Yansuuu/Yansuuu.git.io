@@ -43,7 +43,7 @@
     
     <title>
         
-            BubbleSort三种版本 | 
+            注册事件兼容处理笔记 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,算法">
+    <meta name="keywords" content=",javascript,笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/04/23/BubbleSort/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/17/注册事件兼容处理笔记/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/04/23/BubbleSort/">
+    <meta property="og:url" content="http://yoursite.com/2018/07/17/注册事件兼容处理笔记/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="BubbleSort三种版本 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="注册事件兼容处理笔记 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="算法"> 
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Mon Apr 23 2018 03:04:41 GMT+0800">
-        <meta property="article:modified_time" content="Mon Apr 23 2018 03:51:07 GMT+0800">
+        <meta property="article:published_time" content="Tue Jul 17 2018 03:43:00 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 17 2018 04:19:55 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/04/23/BubbleSort/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/07/17/注册事件兼容处理笔记/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/04/23/BubbleSort/index.html",
-    "headline": "BubbleSort三种版本",
-    "datePublished": "Mon Apr 23 2018 03:04:41 GMT+0800",
-    "dateModified": "Mon Apr 23 2018 03:51:07 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/07/17/注册事件兼容处理笔记/index.html",
+    "headline": "注册事件兼容处理笔记",
+    "datePublished": "Tue Jul 17 2018 03:43:00 GMT+0800",
+    "dateModified": "Tue Jul 17 2018 04:19:55 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,算法",
+    "keywords": ",javascript,笔记",
     "description": "",
 }
 </script>
@@ -347,7 +347,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#冒泡排序："><span class="post-toc-number">1.</span> <span class="post-toc-text">冒泡排序：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本一：原始版对比量为（n-1）-（n-1）"><span class="post-toc-number">2.</span> <span class="post-toc-text">版本一：原始版对比量为（n-1）* （n-1）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本二：减少每轮比较次数"><span class="post-toc-number">3.</span> <span class="post-toc-text">版本二：减少每轮比较次数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#版本三：在减少每轮对比次数的基础上，减少轮数"><span class="post-toc-number">4.</span> <span class="post-toc-text">版本三：在减少每轮对比次数的基础上，减少轮数</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#注册事件三种方式"><span class="post-toc-number">1.</span> <span class="post-toc-text">注册事件三种方式</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#兼容处理解决方案"><span class="post-toc-number">2.</span> <span class="post-toc-text">兼容处理解决方案</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方案一："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">解决方案一：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方案二：改进方案一，只需判断一次"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">解决方案二：改进方案一，只需判断一次</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点一：三种事件注册方法中this的指向不同；"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">缺点一：三种事件注册方法中this的指向不同；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解决方案三：统一方案二中的差异"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">解决方案三：统一方案二中的差异</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种注册方式中的this指向区别："><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">三种注册方式中的this指向区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三种注册方式中系统默认传入事件对象的不同："><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">三种注册方式中系统默认传入事件对象的不同：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#统一方法："><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">统一方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他改进："><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">其他改进：</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -379,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                BubbleSort三种版本
+                注册事件兼容处理笔记
             </p>
         </div>
 
@@ -398,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>4月 23, 2018</span>
+        <span>7月 17, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -422,7 +422,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/算法/">算法</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -467,71 +467,122 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="冒泡排序："><a href="#冒泡排序：" class="headerlink" title="冒泡排序："></a>冒泡排序：</h2><p>排序的一种，相邻两个元素作比较，符合某种规则交换位置，直到达到目标为止</p>
-<p>一下为利用冒泡排序将一组数列从小到大重新排序</p>
-<h2 id="版本一：原始版对比量为（n-1）-（n-1）"><a href="#版本一：原始版对比量为（n-1）-（n-1）" class="headerlink" title="版本一：原始版对比量为（n-1）* （n-1）"></a>版本一：原始版对比量为（n-1）* （n-1）</h2><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第一版冒泡排序将对比n-1轮，每轮对比n-1次，所以用一个循环控制轮数;</span>
-<span class="token comment" spellcheck="true">//第二个循环控制每轮次数;</span>
-<span class="token comment" spellcheck="true">//n为数组元素个数，即arr.length;</span>
-<span class="token comment" spellcheck="true">//因为数组索引取值从0开始，所以arr.length-1;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//把大的数放到后面去，小的放到前面去</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        <h1 id="注册事件三种方式"><a href="#注册事件三种方式" class="headerlink" title="注册事件三种方式"></a>注册事件三种方式</h1><ol>
+<li>ele.”on” + 事件类型 = handler：简单，但是后注册的同名事件会覆盖前面的事件驱动函数</li>
+<li>ele.addEventListener(type, handler, useCapture)：同名事件不会覆盖，但是对ie678有兼容问题</li>
+<li>ele.attachEvent(“on” +type, handler)：同名事件不会覆盖，兼容ie678，不兼容ie9+和ff/chrome</li>
+</ol>
+<h1 id="兼容处理解决方案"><a href="#兼容处理解决方案" class="headerlink" title="兼容处理解决方案"></a>兼容处理解决方案</h1><h2 id="解决方案一："><a href="#解决方案一：" class="headerlink" title="解决方案一："></a>解决方案一：</h2><p>将三种方式封装进一个函数中，进行能力测试，根据能力测试来调用不同的注册事件方法</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">registeEvent</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//能力测试</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        target<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>target<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        target<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"on"</span> <span class="token operator">+</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//检查该对象是否已经帮过同名事件，如果有，则在执行新事件驱动函数前先执行老驱动函数</span>
+        <span class="token comment" spellcheck="true">//再注册新事件前，先将老同名事件驱动函数保存起来</span>
+        <span class="token keyword">var</span> oldEvent <span class="token operator">=</span> target<span class="token punctuation">[</span><span class="token string">"on"</span> <span class="token operator">+</span> type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        target<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>oldEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">oldEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="版本二：减少每轮比较次数"><a href="#版本二：减少每轮比较次数" class="headerlink" title="版本二：减少每轮比较次数"></a>版本二：减少每轮比较次数</h2><p>实际上在对比时，每一轮都会得到自己一个最值（最大值或者最小值），</p>
-<p>也就是说每轮都可以比上一轮少比较一次</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第二版冒泡排序还是对比n-1轮</span>
-    <span class="token comment" spellcheck="true">//但每轮对比次数都比上一轮少一次,所以j &lt; arr.lenegth-1-i;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token operator">-</span>i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//把大的数放到后面去，小的放到前面去</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>缺点：每次注册事件都需要进行一遍判断</p>
+<h2 id="解决方案二：改进方案一，只需判断一次"><a href="#解决方案二：改进方案一，只需判断一次" class="headerlink" title="解决方案二：改进方案一，只需判断一次"></a>解决方案二：改进方案一，只需判断一次</h2><p>创建一个函数进行能力测试，根据不同的能力测试结果返回不同的函数，此后的事件注册只需要调用这个函数就可以了</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createEventRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            target<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            target<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"on"</span> <span class="token operator">+</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> oldEvent <span class="token operator">=</span> target<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            target<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>oldEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token function">oldEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token function">handler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>第一版对比轮数是5*5=25次；</p>
-<p>第二版则是5+4+3+2+1=15次；</p>
-<h2 id="版本三：在减少每轮对比次数的基础上，减少轮数"><a href="#版本三：在减少每轮对比次数的基础上，减少轮数" class="headerlink" title="版本三：在减少每轮对比次数的基础上，减少轮数"></a>版本三：在减少每轮对比次数的基础上，减少轮数</h2><p>实际将数组重新排序的情况，会有在中途就已经排序好的情况，如果我们能检查出来这种情况，剩下的比较轮数就可以不用去进行了。<br>什么情况算是排序好了呢？<br>当一轮比较中不在有前边的数比后面的数大了，不再发生换位的时候。</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">44</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">;</span> 
-<span class="token keyword">var</span> sum1 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//来统计一共比较了多少次</span>
-<span class="token keyword">var</span> sum2 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//来统计一共比较了几轮</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="token comment" spellcheck="true">//第三版冒泡排序将使用开闭原则检查是否还需要换位</span>
-    <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment" spellcheck="true">//设置一个标识来判断是否发生了换位</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token operator">-</span>i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>  <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-            flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//发生了换位将标识flag赋值为false；</span>
+<span class="token comment" spellcheck="true">//测试</span>
+window<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> registeEvent <span class="token operator">=</span> <span class="token function">createEventRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">registeEvent</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"注册上了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="缺点一：三种事件注册方法中this的指向不同；"><a href="#缺点一：三种事件注册方法中this的指向不同；" class="headerlink" title="缺点一：三种事件注册方法中this的指向不同；"></a><strong>缺点一</strong>：三种事件注册方法中this的指向不同；</h3><h3 id="缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象"><a href="#缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象" class="headerlink" title="缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象"></a>缺点二：三种事件中系统并不都默认给事件驱动函数传递事件对象</h3><h2 id="解决方案三：统一方案二中的差异"><a href="#解决方案三：统一方案二中的差异" class="headerlink" title="解决方案三：统一方案二中的差异"></a>解决方案三：统一方案二中的差异</h2><h3 id="三种注册方式中的this指向区别："><a href="#三种注册方式中的this指向区别：" class="headerlink" title="三种注册方式中的this指向区别："></a>三种注册方式中的this指向区别：</h3><ul>
+<li>addEventListener和点语法注册的事件驱动函数中，this的指向是事件源</li>
+<li>attachEvent的事件驱动函数中，this的指向是window</li>
+</ul>
+<h3 id="三种注册方式中系统默认传入事件对象的不同："><a href="#三种注册方式中系统默认传入事件对象的不同：" class="headerlink" title="三种注册方式中系统默认传入事件对象的不同："></a>三种注册方式中系统默认传入事件对象的不同：</h3><ul>
+<li>addEventListener和点语法注册的事件驱动函数中，系统默认传入事件对象作为参数</li>
+</ul>
+<pre class="line-numbers language-javascript"><code class="language-javascript">ele<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//可以通过一个形参接受到这个默认传入的事件对象</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>attachEvent中，系统没有传入，所以无法通过上述方式获取事件对象，而是通过window.event获取事件对象<h3 id="统一方法："><a href="#统一方法：" class="headerlink" title="统一方法："></a>统一方法：</h3></li>
+</ul>
+<p>通过事件驱动函数.call()方法改变this指向，并传入window.event作为参数</p>
+<h3 id="其他改进："><a href="#其他改进：" class="headerlink" title="其他改进："></a>其他改进：</h3><p>在点语法注册事件中为了不覆盖之前的同名事件，先获取的之前的事件再注册事件，在注册的事件中判断是否存在老事件oldEvent，如果有先执行老事件在执行新事件handler；</p>
+<p>在这里，调用老事件和新事件都是函数模式调用函数，this指向是window，并且没有系统默认传入的事件对象参数，一次也需要采取上述统一方法中的上下文调用方式进行改动，将this指向改为事件源，并传入事件对象</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">createEventRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>addEventListener<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            target<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        sum1 <span class="token operator">=</span><span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    sum2 <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//当flag不发生变化，也就是说这一轮中的元素已经不发生交换了，这时候可以跳出循环，因为排序已经完成了；</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>attachEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            target<span class="token punctuation">.</span><span class="token function">attachEvent</span><span class="token punctuation">(</span><span class="token string">"on"</span> <span class="token operator">+</span> type<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//将事件驱动函数中this指向触发事件的目标节点，并且给事件驱动函数</span>
+                <span class="token comment" spellcheck="true">//传入事件对象作为参数</span>
+                handler<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> window<span class="token punctuation">.</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> type<span class="token punctuation">,</span> handler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> oldEvent <span class="token operator">=</span> target<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>type<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            target<span class="token punctuation">[</span><span class="token string">"on"</span><span class="token operator">+</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                   <span class="token comment" spellcheck="true">//这里的this的指向是target</span>
+                <span class="token comment" spellcheck="true">//并且可以在这里接受到系统默认传递来的事件对象</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>oldEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//但是下方是函数调用模式，其this指向是window,并且系统不会默认传入事件的对象</span>
+                    <span class="token comment" spellcheck="true">//oldEvent();</span>
+                    <span class="token comment" spellcheck="true">//更改，当前作用域中的this指向就是事件源，所以不用写target，直接写this</span>
+                    oldEvent<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment" spellcheck="true">//handler();</span>
+                <span class="token comment" spellcheck="true">//同上改正</span>
+                handler<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span>event<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//[-5, 1, 6, 8, 22, 44];</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sum1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//12</span>
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sum2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//3</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>第三版只比较了三轮，12次，比第二版比较次数还要少。</p>
+<span class="token comment" spellcheck="true">//测试</span>
+window<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> registeEvent <span class="token operator">=</span> <span class="token function">createEventRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">registeEvent</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> <span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"注册上了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -552,21 +603,13 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/04/24/判断素数的三种写法/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/04/23/递归初级练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/15/上下文函数调用模式练习/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
