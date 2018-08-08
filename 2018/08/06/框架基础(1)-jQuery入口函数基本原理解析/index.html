@@ -43,7 +43,7 @@
     
     <title>
         
-            面向对象练习1：歌曲管理 | 
+            框架基础(1)---jQuery入口函数基本原理解析 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,练习">
+    <meta name="keywords" content=",javascript,笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/07/18/面向对象练习1：歌曲管理/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/08/06/框架基础(1)-jQuery入口函数基本原理解析/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/07/18/面向对象练习1：歌曲管理/">
+    <meta property="og:url" content="http://yoursite.com/2018/08/06/框架基础(1)-jQuery入口函数基本原理解析/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="面向对象练习1：歌曲管理 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="框架基础(1)---jQuery入口函数基本原理解析 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Wed Jul 18 2018 05:26:05 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 18 2018 05:35:42 GMT+0800">
+        <meta property="article:published_time" content="Mon Aug 06 2018 03:09:39 GMT+0800">
+        <meta property="article:modified_time" content="Mon Aug 06 2018 04:04:18 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/07/18/面向对象练习1：歌曲管理/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/08/06/框架基础(1)-jQuery入口函数基本原理解析/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/07/18/面向对象练习1：歌曲管理/index.html",
-    "headline": "面向对象练习1：歌曲管理",
-    "datePublished": "Wed Jul 18 2018 05:26:05 GMT+0800",
-    "dateModified": "Wed Jul 18 2018 05:35:42 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/08/06/框架基础(1)-jQuery入口函数基本原理解析/index.html",
+    "headline": "框架基础(1)---jQuery入口函数基本原理解析",
+    "datePublished": "Mon Aug 06 2018 03:09:39 GMT+0800",
+    "dateModified": "Mon Aug 06 2018 04:04:18 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,练习",
+    "keywords": ",javascript,笔记",
     "description": "",
 }
 </script>
@@ -370,7 +370,7 @@
         
     
             <p class="article-headline-p">
-                面向对象练习1：歌曲管理
+                框架基础(1)---jQuery入口函数基本原理解析
             </p>
         </div>
 
@@ -389,7 +389,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>7月 18, 2018</span>
+        <span>8月 06, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -413,7 +413,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -458,107 +458,127 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">SongManager</span><span class="token punctuation">(</span>songList<span class="token punctuation">,</span> parentId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//如果传入了歌曲数组，就赋值，否则默认为空数组</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>songList <span class="token operator">=</span> songList <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-       <span class="token comment" spellcheck="true">//如果传入了容器盒子的id就赋值，否则空字符串</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span>parentId <span class="token operator">=</span> parentId <span class="token operator">||</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//调用构造函数的同时就调用初始化方法</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//入口函数：从工厂函数进入到达init构造函数，在构造函数进行所有的初始化并获得实例对象，因此称为入口函数</span>
+
+init<span class="token punctuation">.</span>isHTML <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>html<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 过滤空类型</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>html<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 第一个字符是&lt;最后一个字符是>，并且字符串长度>=3</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>html<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">"&lt;"</span> <span class="token operator">&amp;&amp;</span>
+        html<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>html<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">">"</span> <span class="token operator">&amp;&amp;</span> 
+        html<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 其他所有情况都是false</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token comment" spellcheck="true">//原型替换</span>
-SongManager<span class="token punctuation">.</span>prototype <span class="token operator">=</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">//原型替换方法，需要手动设置constructor属性，否则是Object</span>
-    constructor<span class="token punctuation">:</span> SongManager<span class="token punctuation">,</span>
-    _init<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//将获取的歌曲列表渲染到页面中去</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    render<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>parentId <span class="token operator">===</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//如果父盒子id没有传入，则报错</span>
-            <span class="token keyword">throw</span> <span class="token string">"请传入容器的id"</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">var</span> parentBox <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parentId<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">var</span> strArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> song <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            strArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'&lt;div class="songslist-single">'</span> <span class="token operator">+</span>
-                            <span class="token string">'&lt;div class="songslist-name">'</span> <span class="token operator">+</span> song<span class="token punctuation">.</span>songName <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span> <span class="token operator">+</span>
-                            <span class="token string">'&lt;div class="songslist-singer">'</span> <span class="token operator">+</span> song<span class="token punctuation">.</span>singer <span class="token operator">+</span> <span class="token string">'&lt;/div>'</span> <span class="token operator">+</span>
-                        <span class="token string">'&lt;/div>'</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-        parentBox<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> strArr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token comment" spellcheck="true">//增删改查</span>
-    addSong<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>songName<span class="token punctuation">,</span> singer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">//验证歌曲名称和歌手名不可以不传，也不可以传入空字符串或者空格</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>songName <span class="token operator">==</span> undefined <span class="token operator">||</span> singer <span class="token operator">==</span> undefined <span class="token operator">||</span> songName<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">""</span> <span class="token operator">||</span> singer<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">throw</span> <span class="token string">"请输入正确的歌曲名称和歌手名字"</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">var</span> temp <span class="token operator">=</span> <span class="token punctuation">{</span>
-            songName<span class="token punctuation">:</span> songName<span class="token punctuation">,</span>
-            singer<span class="token punctuation">:</span> singer
-        <span class="token punctuation">}</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//修改歌曲列表后重新修改页面</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> temp<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    removeSong<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>songName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">var</span> song <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">selectSong</span><span class="token punctuation">(</span>songName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>song<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//这里删除数组元素需要该元素索引</span>
-            <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>index<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// trim工具函数</span>
+init<span class="token punctuation">.</span>trim <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> str <span class="token operator">!==</span> <span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>str<span class="token punctuation">.</span>trim<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
+    <span class="token keyword">return</span> str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/^\s+|\s+$/g</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+init<span class="token punctuation">.</span>isFunction <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> fn <span class="token operator">===</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// typeof就是检测不了数组</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+init<span class="token punctuation">.</span>isWindow <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>w<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 这一这里是判断是否相等，不要写成赋值了</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>w<span class="token punctuation">.</span>window <span class="token operator">==</span> w<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+init<span class="token punctuation">.</span>isLikeArray <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 过滤掉window/函数和非对象的其他数据类型</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>init<span class="token punctuation">.</span><span class="token function">isWindow</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">||</span> init<span class="token punctuation">.</span><span class="token function">isFunction</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token keyword">typeof</span> arr <span class="token operator">!==</span> <span class="token string">"object"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 真数组</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">"[object Array]"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 伪数组：必须要有length属性，其后是length = 0||必须有length - 1这个下表上的值</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"length"</span> <span class="token keyword">in</span> arr <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span>arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span> <span class="token keyword">in</span> arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 必须有length in arr 条件判断，不然arr.length会报错</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>    
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">init</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 先过滤掉null/undefined/NaN/0/""</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>selector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 返回空实例</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 然后判断字符串：html片段或者其他</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> selector <span class="token operator">===</span> <span class="token string">"string"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 使用trim对字符川前后空格进行处理</span>
+        selector <span class="token operator">=</span> init<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 通过正则表达式来判断是否是html片段</span>
+        <span class="token comment" spellcheck="true">// 也可以通过chartAt和length来判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>init<span class="token punctuation">.</span><span class="token function">isHTML</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 如果是html片段，临时建立一个div，将html片段放入其中</span>
+            <span class="token comment" spellcheck="true">// 片段自动成为div的子元素</span>
+            <span class="token comment" spellcheck="true">// div.childNodes来遍历div的子元素，分别添加到this身上，别忘了length属性</span>
+            <span class="token comment" spellcheck="true">// 可以借用数组的push方法配合apply来添加子元素到实例对象上，会自动维护length属性</span>
+            <span class="token keyword">var</span> tempDiv <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            tempDiv<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> selector<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 构造函数中的this指的就是实例对象</span>
+            <span class="token comment" spellcheck="true">// 数组函数的借用会自动维护length属性</span>
+            <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>push<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> tempDiv<span class="token punctuation">.</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// new会自动return this这里其实可以不用写，这里return this是为了防止放下接着运行接下来的构造函数部分(如果有其他需要运行的部分的话)</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+
         <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    updateSong<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>songName<span class="token punctuation">,</span> singer<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">var</span> song <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">selectSong</span><span class="token punctuation">(</span>songName<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>song <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            song<span class="token punctuation">.</span>singer <span class="token operator">=</span>  singer<span class="token punctuation">;</span>
-            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> song<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    selectSong<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>songName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> song <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>songList<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//根据歌名查找是否存在这首歌</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>song<span class="token punctuation">.</span>songName <span class="token operator">==</span> songName<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//找到了</span>
-                <span class="token keyword">return</span> song<span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 就是非html片段</span>
+            <span class="token comment" spellcheck="true">// 将其统一作为选择器来看待，用querySelectorAll来获取dom元素，并借用数组push来分别添加</span>
+            <span class="token comment" spellcheck="true">// 无法作为选择器的字符串，也就无法获得dom元素，所以会获得一个空实例</span>
+
+            <span class="token comment" spellcheck="true">// 无效选择器会报错所有要有trycatch机制</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">var</span> nodes <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>push<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> nodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 现有length再有selector这个顺序（jQ上的）</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>selector <span class="token operator">=</span> selector<span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 若果报错了说明是无效选择器，直接返回空实例就可以了，length = 0；</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>selector <span class="token operator">=</span> selector<span class="token punctuation">;</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">//整个循环都找不到</span>
-        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 判断数组、伪数组</span>
+    <span class="token comment" spellcheck="true">// 先过滤掉window对象和函数</span>
+    <span class="token comment" spellcheck="true">// obj.window == obj是window</span>
+    <span class="token comment" spellcheck="true">// typeof fn == "function" 是函数</span>
+    <span class="token comment" spellcheck="true">// 数组判断使用({}).toString.call()来判断</span>
+    <span class="token comment" spellcheck="true">// 伪数组：1.必须有length这个属性</span>
+    <span class="token comment" spellcheck="true">//         2.如果length= 0， 无所谓有几个元素</span>
+    <span class="token comment" spellcheck="true">//         3.如果不为0，则必须有length - 1这个下标的元素值</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>init<span class="token punctuation">.</span><span class="token function">isLikeArray</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 利用数组.push.apply()来将数组和维数组中每一项添加到实例中，并且这个数组方法的借用会自动维护length属性</span>
+        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>push<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> selector<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 除了上述之外的其他数据，都会直接添加到实例中，length = 1;</span>
+        <span class="token keyword">this</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> selector<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-
-window<span class="token punctuation">.</span>onload  <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> songList <span class="token operator">=</span> <span class="token punctuation">[</span>
-        <span class="token punctuation">{</span>
-            songName<span class="token punctuation">:</span> <span class="token string">"coin toss"</span><span class="token punctuation">,</span>
-            singer<span class="token punctuation">:</span> <span class="token string">"冈田奈奈"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-            songName<span class="token punctuation">:</span> <span class="token string">"thinker"</span><span class="token punctuation">,</span>
-            singer<span class="token punctuation">:</span> <span class="token string">"冈田奈奈&amp;小岛真子"</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-            songName<span class="token punctuation">:</span> <span class="token string">"jyabajya"</span><span class="token punctuation">,</span>
-            singer<span class="token punctuation">:</span> <span class="token string">"冈田奈奈&amp;村山彩希&amp;others"</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> mySongManger <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SongManager</span><span class="token punctuation">(</span>songList<span class="token punctuation">,</span> <span class="token string">"c"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">//可以通过此对象来初始化页面，并修改歌单同时修改页面</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -579,7 +599,7 @@ window<span class="token punctuation">.</span>onload  <span class="token operato
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/07/19/canvas案例-移动矩形动画/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/08/06/框架基础(2)-Jquery基本框架/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -593,7 +613,7 @@ window<span class="token punctuation">.</span>onload  <span class="token operato
 
     <!-- Next Nav -->
     
-        <a href="/2018/07/17/注册事件兼容处理笔记/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/30/canvas案例-封装饼状图对象/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
