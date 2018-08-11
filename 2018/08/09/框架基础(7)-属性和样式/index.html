@@ -43,7 +43,7 @@
     
     <title>
         
-            框架基础7---属性和样式 | 
+            框架基础(7)---属性和样式 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",javascript,笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -232,14 +232,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/2018/08/09/框架基础(7)-属性和样式/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="框架基础7---属性和样式 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="框架基础(7)---属性和样式 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="笔记"> 
 
     
         <meta property="article:published_time" content="Thu Aug 09 2018 04:35:07 GMT+0800">
-        <meta property="article:modified_time" content="Thu Aug 09 2018 04:35:08 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 12 2018 03:09:24 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,9 +260,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2018/08/09/框架基础(7)-属性和样式/index.html",
-    "headline": "框架基础7---属性和样式",
+    "headline": "框架基础(7)---属性和样式",
     "datePublished": "Thu Aug 09 2018 04:35:07 GMT+0800",
-    "dateModified": "Thu Aug 09 2018 04:35:08 GMT+0800",
+    "dateModified": "Sun Aug 12 2018 03:09:24 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": "",
+    "keywords": ",javascript,笔记",
     "description": "",
 }
 </script>
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#attr方法的实现"><span class="post-toc-number">1.</span> <span class="post-toc-text">attr方法的实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#prop方法的实现"><span class="post-toc-number">2.</span> <span class="post-toc-text">prop方法的实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#css方法实现"><span class="post-toc-number">3.</span> <span class="post-toc-text">css方法实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#val方法实现"><span class="post-toc-number">4.</span> <span class="post-toc-text">val方法实现</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hasClass-四种写法"><span class="post-toc-number">5.</span> <span class="post-toc-text">hasClass(四种写法)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#addClass"><span class="post-toc-number">6.</span> <span class="post-toc-text">addClass</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#removeClass"><span class="post-toc-number">7.</span> <span class="post-toc-text">removeClass</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#toggleClass"><span class="post-toc-number">8.</span> <span class="post-toc-text">toggleClass</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -370,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                框架基础7---属性和样式
+                框架基础(7)---属性和样式
             </p>
         </div>
 
@@ -406,6 +415,15 @@
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
+    </ul>
     
 
     <!-- Share -->
@@ -449,7 +467,458 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        
+        <p>通过封装原生dom的api来模拟jQuery的api的实现</p>
+<h1 id="attr方法的实现"><a href="#attr方法的实现" class="headerlink" title="attr方法的实现"></a>attr方法的实现</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// attr: 获取/设置[属性节点]值</span>
+    <span class="token comment" spellcheck="true">// 思路一： 先判断参数类型再判断参数类型</span>
+    <span class="token comment" spellcheck="true">// 过滤掉非字符串/非对象类型的数据类型，直接return this;</span>
+    <span class="token comment" spellcheck="true">// 如果是字符串类型，判断参数个数</span>
+    <span class="token comment" spellcheck="true">// </span>
+    attr<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> attr<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 如果既不是字符串也不是对象数据类型的的就直接returnthis</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 判断类型</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 判断参数个数 一个参数是获取第一个元素的对应属性节点值</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 返回第一个元素的属性节点值</span>
+                <span class="token comment" spellcheck="true">// dom.getAttribute( attrName )是原生dom方法，获取属性节点值</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 遍历设置</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span> attr<span class="token punctuation">,</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 对象类型</span>
+            <span class="token comment" spellcheck="true">// 外层遍历属性节点值对象，内层遍历实例对象</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> attr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span> key<span class="token punctuation">,</span> attr<span class="token punctuation">[</span> key <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 为了链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 简写思路二：先判断参数个数，再判断参数类型</span>
+    _attr<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> attr<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 保存一下当前this</span>
+        <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 判断类型</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> attr <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 对象类型需要遍历</span>
+                <span class="token comment" spellcheck="true">// 使用静态遍历方法</span>
+                jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> attr<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    self<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">// 这里的this是实例的每一个元素</span>
+                        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span> key<span class="token punctuation">,</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span> attr<span class="token punctuation">,</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="prop方法的实现"><a href="#prop方法的实现" class="headerlink" title="prop方法的实现"></a>prop方法的实现</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// prop: 获取/设置[属性]值</span>
+    <span class="token comment" spellcheck="true">// 思路一： 先判断参数类型再判断参数类型</span>
+    <span class="token comment" spellcheck="true">// 过滤掉非字符串/非对象类型的数据类型，直接return this;</span>
+    <span class="token comment" spellcheck="true">// 如果是字符串类型，判断参数个数</span>
+    <span class="token comment" spellcheck="true">// </span>
+    prop<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> prop<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 先过滤掉非字符串、非对象的数据类型</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> prop <span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> prop <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 判断prop的类型，是对象还是字符串，再判断参数个数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> prop <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 获取第一个元素的对应属性值。通过[]语法</span>
+                <span class="token comment" spellcheck="true">//这里是获取属性值，所以使用对象的属性获取语法，又因为是变量，所以用[]语法</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> prop <span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 给所有元素设置</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">[</span> prop <span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 如果是对象类型 批量设置 双层循环</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> key <span class="token keyword">in</span> prop <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">[</span> key <span class="token punctuation">]</span> <span class="token operator">=</span> prop<span class="token punctuation">[</span> key <span class="token punctuation">]</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+
+
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    _prop<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> prop<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 先判断个数在类型，并用each来循环</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> prop <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 获取操作</span>
+                <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> prop <span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> prop <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 批量设置</span>
+                jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> prop<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> key<span class="token punctuation">,</span> val <span class="token punctuation">)</span>  <span class="token punctuation">{</span>
+                    self<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">this</span><span class="token punctuation">[</span> key <span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 设置</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">[</span> prop <span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="css方法实现"><a href="#css方法实现" class="headerlink" title="css方法实现"></a>css方法实现</h1><p>css方法使用：</p>
+<ol>
+<li>当有一个字符串参数的时候获取第一个元素的对应样式值 $(“span”).css( “height” );</li>
+<li>当有一个对象参数的时候，给所有元素设置对象中的所有样式 $(“span”).css( {height: “300px”, width: “100px”} );</li>
+<li>当有两个字符串参数的时候，给所有元素设置对应样式对应值  $(“span”).css( “height” , “200px”);</li>
+</ol>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//为jQuery添加一个获取对应样式值得静态方法</span>
+jQuery<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    getStyle<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> dom<span class="token punctuation">,</span> style <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 能力测试 如果有getCOmputedStyle就用这个来获取样式</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> window<span class="token punctuation">.</span>getComputedStyle <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span> dom <span class="token punctuation">)</span><span class="token punctuation">[</span> style <span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+            <span class="token comment" spellcheck="true">// 兼容IE678</span>
+            <span class="token keyword">return</span> dom<span class="token punctuation">.</span>currentStyle<span class="token punctuation">[</span> style <span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// css:判断个数再类型</span>
+    css<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> styleName<span class="token punctuation">,</span> style <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 判断是字符串还是对象</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> styleName <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 返回第一个元素的对应样式值</span>
+                <span class="token keyword">return</span> jQuery<span class="token punctuation">.</span><span class="token function">getStyle</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">,</span> styleName <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> styleName <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 双层遍历批量设置</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> key <span class="token keyword">in</span> styleName <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token comment" spellcheck="true">//设置写法</span>
+                        <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">[</span> <span class="token string">"style"</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> key <span class="token punctuation">]</span> <span class="token operator">=</span> styleName<span class="token punctuation">[</span> key <span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 设置</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//设置写法 dom.style[ stylename ]</span>
+                <span class="token comment" spellcheck="true">//dom[ "style" ][ styleName ];</span>
+                <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">[</span> <span class="token string">"style"</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> styleName <span class="token punctuation">]</span> <span class="token operator">=</span> style<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 联式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">//改进写法</span>
+    _css<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> styleName<span class="token punctuation">,</span> style <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 保存一下this值。这里的的是实例</span>
+        <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> styleName <span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> jQuery<span class="token punctuation">.</span><span class="token function">isObject</span><span class="token punctuation">(</span> styleName <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+        <span class="token comment" spellcheck="true">// 判断类型再参数个数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> jQuery<span class="token punctuation">.</span><span class="token function">isString</span><span class="token punctuation">(</span> styleName <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 获取操作</span>
+                <span class="token keyword">return</span> jQuery<span class="token punctuation">.</span><span class="token function">getStyle</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">,</span> styleName <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">>=</span> <span class="token number">2</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 设置操作</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 这里的this是每一个元素</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token string">"style"</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> styleName <span class="token punctuation">]</span> <span class="token operator">=</span> style<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 对象数据类型</span>
+            <span class="token comment" spellcheck="true">// 双层遍历</span>
+            jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> styleName<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> key<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                self<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 这里的this是每一个元素</span>
+                    <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token string">"style"</span> <span class="token punctuation">]</span><span class="token punctuation">[</span> key <span class="token punctuation">]</span> <span class="token operator">=</span> val<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="val方法实现"><a href="#val方法实现" class="headerlink" title="val方法实现"></a>val方法实现</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// val:不传参数获取第一个元素的value值，传参，设置所有元素的val属性值</span>
+    <span class="token comment" spellcheck="true">// 链式编程 return this;</span>
+    val<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> value <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+                <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// each简写</span>
+    _val<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> value <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">[</span> <span class="token number">0</span> <span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> value<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 借用prop</span>
+    __val<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> value <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 没有传参，借用prop返回第一个元素的value属性值</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span> <span class="token string">"value"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 传参数。给所有元素的value属性值设置，并返回当前实例</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">prop</span><span class="token punctuation">(</span> <span class="token string">"value"</span><span class="token punctuation">,</span> value <span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="hasClass-四种写法"><a href="#hasClass-四种写法" class="headerlink" title="hasClass(四种写法)"></a>hasClass(四种写法)</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// hasClass:判断实例中元素是否含有某个类，如果其中一个有就返回true,全都没有才返回false</span>
+    hasClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 处理每一个元素的className</span>
+            <span class="token keyword">var</span> domClass <span class="token operator">=</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">[</span> i <span class="token punctuation">]</span><span class="token punctuation">.</span>className <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 对传入的参数也做前后加空格处理</span>
+            <span class="token comment" spellcheck="true">// 如果indexOf的返回值不等于 -1 说明存在该类，返回true</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> domClass<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> classname <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 整个循环完毕都没有返回true ，也就是说所有元素都没有这个类</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// each改写</span>
+    _hasClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 用来标记是由含有该类，默认没有</span>
+        <span class="token keyword">var</span> has <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// ！== -1不严谨，因为undefined、null</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> classname <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 为什么这里不是return true</span>
+                <span class="token comment" spellcheck="true">// 因为这里中断的是each中的回调，而不是hasClass这个方法，也就是说</span>
+                <span class="token comment" spellcheck="true">// 无法通过这里的return true获得想要的判断值</span>
+                <span class="token comment" spellcheck="true">// 最后 无论如何都会执行 代码块最下方的return false</span>
+                <span class="token comment" spellcheck="true">// return true;</span>
+
+                <span class="token comment" spellcheck="true">// 使用标记法</span>
+                has <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// return false;</span>
+        <span class="token keyword">return</span> has<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 改进第二个方法，当获得true后中断遍历</span>
+    __hasClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 默认是没有</span>
+        <span class="token keyword">var</span> has <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> classname <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                has <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 中断遍历 each方法底层封装了，当获得false时，会break</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> has<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 测试是否可以用reg和match</span>
+    ___hasClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> has <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// classname去空格处理</span>
+        classname <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span> classname <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> classReg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span> <span class="token string">"\\b"</span> <span class="token operator">+</span> classname <span class="token operator">+</span> <span class="token string">"\\b"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 这里的this是每一个元素</span>
+            <span class="token comment" spellcheck="true">//str.match:查找字符串中是否有匹配正则参数的字符串，有的话返回一个数组存放匹配的字符串</span>
+            <span class="token comment" spellcheck="true">//没有的话返回null</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>className<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span> classReg <span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token keyword">null</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                has <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 只要有一个有就终止遍历</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> has<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>；
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="addClass"><a href="#addClass" class="headerlink" title="addClass"></a>addClass</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// addClass：遍历实例中每一个元素，</span>
+    <span class="token comment" spellcheck="true">//             判断这个元素是否有这个class</span>
+    <span class="token comment" spellcheck="true">//             如果有就忽略</span>
+    <span class="token comment" spellcheck="true">//             没有就给它添加上这个class</span>
+    addClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// this ==> jQObj</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// this ==> dom in jQobj</span>
+
+            <span class="token comment" spellcheck="true">// does it has this classname</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span><span class="token function">jQuery</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">__hasClass</span><span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// if not: add </span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">" "</span> <span class="token operator">+</span> classname<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 批量处理利用str.split将字符串参数转为数组</span>
+    <span class="token comment" spellcheck="true">// 双层遍历：外层遍历实例中的每一个dom元素</span>
+    <span class="token comment" spellcheck="true">//             内层遍历每一个class</span>
+    _addClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classnames <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 对传入的参数进行处理，去掉可能存在的前后空格，在以空格为依据劈成数组</span>
+        <span class="token keyword">var</span> classArr <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span> classnames <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 双层遍历</span>
+        <span class="token comment" spellcheck="true">// 外层遍历每一个元素</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// this ==> dom</span>
+            <span class="token comment" spellcheck="true">// 之后需要使用jq实例方法，所以进行jq包装</span>
+            <span class="token keyword">var</span> $<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token function">jQuery</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment" spellcheck="true">// 内层遍历classArr</span>
+            jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> classArr<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> i<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 判断当前元素是否有这个class,有就忽略，无则添加</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>$<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">__hasClass</span><span class="token punctuation">(</span> val <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// 这里通过dom.className来添加新的class</span>
+                    <span class="token comment" spellcheck="true">// 所以要将jq实例转为dom</span>
+                    $<span class="token keyword">this</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>className <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">" "</span> <span class="token operator">+</span> val<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>；
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="removeClass"><a href="#removeClass" class="headerlink" title="removeClass"></a>removeClass</h1><p>这个方法的改进使用了动态创建正则表达式</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// removeClass:如果没有传参数</span>
+    <span class="token comment" spellcheck="true">//                 遍历每一个元素清空className</span>
+    <span class="token comment" spellcheck="true">//                 如果传了阐述 便利每一个元素清除对应class(使用前后空格处理法和replace)</span>
+    <span class="token comment" spellcheck="true">//                 链式编程 返回this</span>
+    removeClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">+</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token operator">+</span> classname <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">,</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">// 借用静态方法去一下前后空格</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span> <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// removeClass: 升级split + 正则</span>
+    _removeClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classnames <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 先判断参数个数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> arguments<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 将每个元素的className清空</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>className <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 有参数则清除每一个元素中每一个需要清除的class</span>
+            <span class="token comment" spellcheck="true">// 处理参数，将其变为一个可以遍历的数组</span>
+            <span class="token keyword">var</span> classArr <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span> classnames <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 双层遍历，外层遍历每一个元素，内层遍历classArr</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 这里的this是每一个元素</span>
+                <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+
+                jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> classArr<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> i<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// !!!这里改进是使用正则配合replace而不是空格处理</span>
+                    self<span class="token punctuation">.</span>className <span class="token operator">=</span> self<span class="token punctuation">.</span>className<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span> <span class="token string">"\\b"</span> <span class="token operator">+</span> val <span class="token operator">+</span> <span class="token string">"\\b"</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">""</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>；
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="toggleClass"><a href="#toggleClass" class="headerlink" title="toggleClass"></a>toggleClass</h1><pre class="line-numbers language-javascript"><code class="language-javascript">jQuery<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// toggleClass:遍历所有元素，如果有这个class就删除，没有就添加 链式编程返回this</span>
+    toggleClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 这里的this是实例中的每一个dom元素</span>
+            <span class="token comment" spellcheck="true">//为了使用jq实例方法，而包装一下</span>
+            <span class="token keyword">var</span> $<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token function">jQuery</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">__hasClass</span><span class="token punctuation">(</span> classname <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">removeClass</span><span class="token punctuation">(</span> classname <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">addClass</span><span class="token punctuation">(</span> classname <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment" spellcheck="true">// 这里的改进也是劈成数组双层遍历</span>
+    _toggleClass<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> classnames <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> classArr <span class="token operator">=</span> jQuery<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span> classnames <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span> <span class="token string">" "</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 这里的this是dom，之后需要使用jq实力方法，所以包装</span>
+            <span class="token keyword">var</span> $<span class="token keyword">this</span> <span class="token operator">=</span> <span class="token function">jQuery</span><span class="token punctuation">(</span> <span class="token keyword">this</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            jQuery<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span> classArr<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> i<span class="token punctuation">,</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">// 判断当前元素是否有这个class，有则删除，没有添加</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span> $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">__hasClass</span><span class="token punctuation">(</span> val <span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_removeClass</span><span class="token punctuation">(</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    $<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_addClass</span><span class="token punctuation">(</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 链式编程</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>；
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
         
     
 
@@ -585,7 +1054,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/CSS3/">CSS3<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML5/">HTML5<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">32</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/AJAX/">AJAX<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/canvas/">canvas<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/">jQuery<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/框架基础/">框架基础<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/移动web/">移动web<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/CSS3/">CSS3<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML5/">HTML5<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">33</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/AJAX/">AJAX<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/canvas/">canvas<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/">jQuery<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/框架基础/">框架基础<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/移动web/">移动web<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
