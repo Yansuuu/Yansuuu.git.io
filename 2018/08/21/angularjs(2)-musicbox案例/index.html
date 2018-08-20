@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            angularjs(2)---musicbox案例 | 
+        
+        Yansuuu&#39;s blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/cointoss-favicon.png">
+    <link rel="icon" href="/img/cointoss-favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content=",javascript,练习,angularjs">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #1de9b6 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #1de9b6 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #1de9b6 !important;
+  }
+
+  .toTop {
+    background: #1de9b6 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #1de9b6;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #1de9b6;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #1de9b6;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #212121;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Yansuuu&#39;s blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/08/21/angularjs(2)-musicbox案例/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/cointoss-favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2018/08/21/angularjs(2)-musicbox案例/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="angularjs(2)---musicbox案例 | Yansuuu&#39;s blog">
+    <meta property="og:image" content="/img/cointoss-favicon.png">
+    <meta property="og:description" content="">
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> <meta property="og:article:tag" content="angularjs"> 
+
+    
+        <meta property="article:published_time" content="Tue Aug 21 2018 01:20:38 GMT+0800">
+        <meta property="article:modified_time" content="Tue Aug 21 2018 01:33:43 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2018/08/21/angularjs(2)-musicbox案例/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2018/08/21/angularjs(2)-musicbox案例/index.html",
+    "headline": "angularjs(2)---musicbox案例",
+    "datePublished": "Tue Aug 21 2018 01:20:38 GMT+0800",
+    "dateModified": "Tue Aug 21 2018 01:33:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Yansuuu",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/cointoss-avtar-2.png"
+        },
+        "description": "人生一度きい"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Yansuuu&#39;s blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/cointoss-favicon.png"
+        }
+    },
+    "keywords": ",javascript,练习,angularjs",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+<link rel="stylesheet" href="/css/prism-a11y-dark.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#angularJS中路由模块的使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">angularJS中路由模块的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#要点"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">要点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#musicbox简单练习"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">musicbox简单练习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js部分"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">js部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#html部分"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">html部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#外部模板部分"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">外部模板部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PHP部分"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">PHP部分</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 7 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                angularjs(2)---musicbox案例
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/cointoss-avtar-2.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Yansuuu</strong>
+        <span>8月 21, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/angularjs/">angularjs</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="angularJS中路由模块的使用"><a href="#angularJS中路由模块的使用" class="headerlink" title="angularJS中路由模块的使用"></a>angularJS中路由模块的使用</h1><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ul>
+<li>ngRoute</li>
+<li>$routeProvider</li>
+<li>$routeParams</li>
+</ul>
+<h2 id="musicbox简单练习"><a href="#musicbox简单练习" class="headerlink" title="musicbox简单练习"></a>musicbox简单练习</h2><h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 创建模块对象</span>
+<span class="token keyword">var</span> App <span class="token operator">=</span> angular<span class="token punctuation">.</span><span class="token function">module</span><span class="token punctuation">(</span> <span class="token string">"App"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span> <span class="token string">"ngRoute"</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 创建控制器对象</span>
+App<span class="token punctuation">.</span><span class="token function">controller</span><span class="token punctuation">(</span> <span class="token string">"navController"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span> <span class="token string">"$scope"</span><span class="token punctuation">,</span> <span class="token string">"$http"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> $scope<span class="token punctuation">,</span> $http <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+
+    <span class="token comment" spellcheck="true">// 还是对dom的操作 实现点击变色 其他导航恢复原色</span>
+    $scope<span class="token punctuation">.</span>change <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> e <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> target <span class="token operator">=</span> e<span class="token punctuation">.</span>target<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// target.style.background = "#C63";</span>
+        <span class="token keyword">var</span> siblings <span class="token operator">=</span> target<span class="token punctuation">.</span>parentNode<span class="token punctuation">.</span>childNodes<span class="token punctuation">;</span>
+
+        <span class="token keyword">var</span> newSiblings <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 过滤出元素节点</span>
+        <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span>forEach<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span> siblings<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+            <span class="token keyword">if</span> <span class="token punctuation">(</span> val<span class="token punctuation">.</span>nodeType <span class="token operator">===</span> <span class="token number">1</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                newSiblings<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span> val <span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+
+        newSiblings<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> val <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+            val<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span> <span class="token string">'active'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+
+
+        target<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span> <span class="token string">'active'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// console.log(siblings);</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// 发送请求获取数据</span>
+    <span class="token function">$http</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+
+        url<span class="token punctuation">:</span> <span class="token string">'./api/nav.php'</span><span class="token punctuation">,</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> data <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+        $scope<span class="token punctuation">.</span>navs <span class="token operator">=</span> data<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+App<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">[</span> <span class="token string">"$routeProvider"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> $routeProvider <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token comment" spellcheck="true">// 这里监听hash的变化</span>
+    $routeProvider<span class="token punctuation">.</span><span class="token function">when</span><span class="token punctuation">(</span> <span class="token string">'/:id'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        templateUrl<span class="token punctuation">:</span> <span class="token string">'./views/songlist.html'</span><span class="token punctuation">,</span>
+        controller<span class="token punctuation">:</span> <span class="token string">'songController'</span>
+    <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">otherwise</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        redirectTo<span class="token punctuation">:</span> <span class="token string">'/1'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span> <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+App<span class="token punctuation">.</span><span class="token function">controller</span><span class="token punctuation">(</span> <span class="token string">'songController'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span> <span class="token string">"$scope"</span><span class="token punctuation">,</span> <span class="token string">"$http"</span><span class="token punctuation">,</span> <span class="token string">"$routeParams"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> $scope<span class="token punctuation">,</span> $http<span class="token punctuation">,</span> $routeParams <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+    <span class="token keyword">var</span> pid <span class="token operator">=</span> $routeParams<span class="token punctuation">.</span>id <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+    <span class="token function">$http</span><span class="token punctuation">(</span> <span class="token punctuation">{</span>
+
+        url<span class="token punctuation">:</span> <span class="token string">'./api/song.php'</span><span class="token punctuation">,</span>
+        method<span class="token punctuation">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+        params<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            pid<span class="token punctuation">:</span> pid
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span> <span class="token keyword">function</span> <span class="token punctuation">(</span> data <span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+
+        $scope<span class="token punctuation">.</span>songs <span class="token operator">=</span> data<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span> <span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token selector"><span class="token class">.musicbox</span> </span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">30</span>px auto<span class="token punctuation">;</span>
+            <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#000</span><span class="token punctuation">;</span>
+            <span class="token property">min-height</span><span class="token punctuation">:</span> <span class="token number">533</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token class">.nav</span> </span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+            <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+            <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token class">.nav</span> a </span><span class="token punctuation">{</span>
+            <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+            <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+            <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+            <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+            <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+            <span class="token property">user-select</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token class">.nav</span> a<span class="token class">.active</span> </span><span class="token punctuation">{</span>
+            <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#C63</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector">ul </span><span class="token punctuation">{</span>
+            <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">ul > li </span><span class="token punctuation">{</span>
+            <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span>px dashed <span class="token hexcode">#ddd</span><span class="token punctuation">;</span>
+            <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector">ul > li<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+            <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#D96</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">/*color: #EBA;*/</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">ng-app</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>App<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicbox<span class="token punctuation">"</span></span> <span class="token attr-name">ng-cloak</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span> <span class="token attr-name">ng-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>navController<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#/{{nav.id}}<span class="token punctuation">"</span></span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nav in navs<span class="token punctuation">"</span></span> <span class="token attr-name">ng-class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{active: nav.id <span class="token punctuation">=</span><span class="token punctuation">=</span><span class="token punctuation">=</span> 1}<span class="token punctuation">"</span></span> <span class="token attr-name">ng-click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>change($event)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{nav.text}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-view</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- &lt;ul>
+                &lt;li>hahah&lt;/li>
+                &lt;li>hahah&lt;/li>
+                &lt;li>hahah&lt;/li>
+            &lt;/ul> --></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../../libs/angular.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--引入模块 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../../libs/angular-route.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="外部模板部分"><a href="#外部模板部分" class="headerlink" title="外部模板部分"></a>外部模板部分</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">ng-repeat</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song in songs track by $index<span class="token punctuation">"</span></span> <span class="token attr-name">ng-cloak</span><span class="token punctuation">></span></span>{{$index + 1}} {{song.text}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="PHP部分"><a href="#PHP部分" class="headerlink" title="PHP部分"></a>PHP部分</h3><pre class="line-numbers language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span> 
+
+    <span class="token variable">$list</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'我很丑可是我很温柔'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'浦公英的约定'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'你我的约定'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'pretty boy'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'See You Again'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'甜甜的'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'再见 我的爱人'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'心中的日月'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Let It Go'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'不要说再见'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Rise'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'再见'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">13</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'追梦人'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">14</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'不能说的秘密'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'고속도로 로맨스'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">16</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'昨日重现'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">17</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Love Me Like You Do'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'好久不见'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">19</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'独角戏'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'K歌之王'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">21</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'往事随风'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">22</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'光辉岁月'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Just Like Fire'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">24</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'涙の物语'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'江南Style'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">26</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'ガラガラ'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">27</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'海阔天空'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">28</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'天空之城'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">29</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'사랑이었다'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">' Good Time'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">31</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'不再犹豫'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'さよならの夏 ～コクリコ坂から～'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">33</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">' Heart And Soul'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">34</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'넘버나인 '</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">35</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'往事只能回味'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">36</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Bang Bang'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">37</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'君が好きだと叫びたい'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">38</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'Same Old Love'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">39</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'君をのせて'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">'id'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">'pid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'text'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'恋恋风尘'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 接受id</span>
+    <span class="token variable">$pid</span> <span class="token operator">=</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span> <span class="token string">'pid'</span> <span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// 遍历list </span>
+    <span class="token keyword">foreach</span> <span class="token punctuation">(</span> <span class="token variable">$list</span> <span class="token keyword">as</span> <span class="token variable">$key</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token variable">$val</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$val</span><span class="token punctuation">[</span> <span class="token string">'pid'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token variable">$pid</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token variable">$result</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$val</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">// printf($result);</span>
+
+    <span class="token keyword">echo</span> <span class="token function">json_encode</span><span class="token punctuation">(</span> <span class="token variable">$result</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token delimiter">?></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/08/19/angularjs(1)-todotabs隔行变色/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/galax-sidebar-header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/cointoss-avtar-2.png" alt="Yansuuu's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        18840842225@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/08/">八月 2018<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">7</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/CSS3/">CSS3<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML5/">HTML5<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">38</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/AJAX/">AJAX<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/angularjs/">angularjs<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/canvas/">canvas<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/">jQuery<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/jQuery/框架基础/">框架基础<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/移动web/">移动web<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="tags">
+                
+                    <i class="material-icons sidebar-material-icons">label-outline</i>
+                
+                tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="timeline">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                timeline
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">44</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/Yansuuu" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Yansuuu's blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#64FFDA'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #64FFDA, 0 0 15px #64FFDA'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#64FFDA',
+        'border-left-color': '#64FFDA'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
