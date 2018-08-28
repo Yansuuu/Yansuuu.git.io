@@ -43,7 +43,7 @@
     
     <title>
         
-            缓动动画框架简易版本封装二 | 
+            node.js学习笔记一---require解析 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,练习">
+    <meta name="keywords" content=",笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/08/28/node-js学习笔记一-require解析/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
+    <meta property="og:url" content="http://yoursite.com/2018/08/28/node-js学习笔记一-require解析/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="缓动动画框架简易版本封装二 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="node.js学习笔记一---require解析 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
+    <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Tue May 08 2018 05:03:38 GMT+0800">
-        <meta property="article:modified_time" content="Tue May 08 2018 05:14:39 GMT+0800">
+        <meta property="article:published_time" content="Tue Aug 28 2018 19:00:19 GMT+0800">
+        <meta property="article:modified_time" content="Tue Aug 28 2018 19:08:01 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/08/28/node-js学习笔记一-require解析/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html",
-    "headline": "缓动动画框架简易版本封装二",
-    "datePublished": "Tue May 08 2018 05:03:38 GMT+0800",
-    "dateModified": "Tue May 08 2018 05:14:39 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/08/28/node-js学习笔记一-require解析/index.html",
+    "headline": "node.js学习笔记一---require解析",
+    "datePublished": "Tue Aug 28 2018 19:00:19 GMT+0800",
+    "dateModified": "Tue Aug 28 2018 19:08:01 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,练习",
+    "keywords": ",笔记",
     "description": "",
 }
 </script>
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#require参数"><span class="post-toc-number">1.</span> <span class="post-toc-text">require参数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#核心模块"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">核心模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件模块"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">文件模块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-路径参数"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1.路径参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-包（npm上第三方模块）"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.包（npm上第三方模块）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#require实现原理简析"><span class="post-toc-number">2.</span> <span class="post-toc-text">require实现原理简析</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -370,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                缓动动画框架简易版本封装二
+                node.js学习笔记一---require解析
             </p>
         </div>
 
@@ -389,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>5月 08, 2018</span>
+        <span>8月 28, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -413,7 +422,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+        <a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -458,147 +467,71 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>这次的缓动动画封装升级部分如下：</p>
-<ol>
-<li>传入一个json，可在动画中变化多个属性</li>
-<li>针对透明度和层级做了优化</li>
-<li>针对清除定时器做了优化</li>
-<li>可传递回调函数</li>
-</ol>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
-<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>head<span class="token operator">></span>
-    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>title<span class="token operator">></span>缓动框架回调函数复习<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
-    <span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
-        <span class="token operator">*</span> <span class="token punctuation">{</span>
-            margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            padding<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        div <span class="token punctuation">{</span>
-            width<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-            height<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-            border<span class="token punctuation">:</span> 3px solid #<span class="token number">666</span><span class="token punctuation">;</span>
-            border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 53px<span class="token punctuation">;</span>
-            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-            top<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
-            left<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            background<span class="token punctuation">:</span> #64FFDA<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        #box2 <span class="token punctuation">{</span>
-            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-            top<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-            left<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-            width<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
-            height<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
-            background<span class="token punctuation">:</span> #<span class="token number">999</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
-<span class="token operator">&lt;</span>body<span class="token operator">></span>
-    <span class="token operator">&lt;</span>button<span class="token operator">></span>会变来变去<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>button<span class="token operator">></span>回到原处圆形<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box2"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <h1 id="require参数"><a href="#require参数" class="headerlink" title="require参数"></a>require参数</h1><p> require参数解析</p>
+<h2 id="核心模块"><a href="#核心模块" class="headerlink" title="核心模块"></a>核心模块</h2><pre><code>  核心模块是Node.js原生提供的加载核心模块的时候，
+  不需要传入路径，因为Node.js已经将核心模块的文件代码
+  编译到了二进制的可执行文件中了
+  在加载的过程中，原生的核心模块的优先级是是最高的
+</code></pre><h2 id="文件模块"><a href="#文件模块" class="headerlink" title="文件模块"></a>文件模块</h2><h3 id="1-路径参数"><a href="#1-路径参数" class="headerlink" title="1.路径参数"></a>1.路径参数</h3><ul>
+<li><p>./或../开始的相对路径文件模块<br> <code>在加载一个自己编写的模块的时候，最好使用__dirname 和 你要加载的模块的文件名拼接</code></p>
+</li>
+<li><p>以/开始的绝对路径文件模块</p>
+<pre><code>* 在Linux或者MAc的操作系统中，/表示系统的根路径
+* 在Windows中，/表示当前文件模块所属的根磁盘路径
+ 不建议使用，了解
+</code></pre></li>
+<li><p>标识符中可以不包含扩展名</p>
+<p>Node会按照<code>.js、.node、.json</code>的次序补足扩展名，依次尝试</p>
+</li>
+</ul>
+<pre><code>  不包含扩展名的时候，Node.js会按照
+    路径.js     以后自己在加载js文件模块的时候，就省略掉.js后缀就可以了
+    路径.node   后缀为node的文件是c/c++写的一些扩展模块
+    路径.json   如果是加载json文件模块，最好加上后缀.json，能稍微的提高一点加载的速度
+      .json文件最终Node.js也是通过fs读文件的形式读取出来的，然后通过JSON.parse()转换成一个对象
+</code></pre><pre><code>Node.js会通过同步阻塞的方式看这个路径是否存在
+依次尝试，直到找到为止，
+如果找不到，报错
+</code></pre><h3 id="2-包（npm上第三方模块）"><a href="#2-包（npm上第三方模块）" class="headerlink" title="2.包（npm上第三方模块）"></a>2.包（npm上第三方模块）</h3><ul>
+<li><p>require 加载包的时候</p>
+<p>直接写包名，先在包内的node_modules,<br>目录下查找，去父级目录下的node_modules目录下查找，<br>依次向上查找，直到根目录。</p>
+</li>
+</ul>
+<h1 id="require实现原理简析"><a href="#require实现原理简析" class="headerlink" title="require实现原理简析"></a>require实现原理简析</h1><pre class="line-numbers language-js"><code class="language-js">
+<span class="token keyword">function</span> <span class="token function">myRequire</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-        <span class="token comment" spellcheck="true">//老三步</span>
-        <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//给 按钮绑上点击事件</span>
-        btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> json1 <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
-                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
-                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">170</span><span class="token punctuation">,</span>
-                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-            <span class="token keyword">var</span> json2 <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
-                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义一个构造函数</span>
+    <span class="token keyword">function</span> <span class="token function">Module</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 有很多这里只考虑exports</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-            <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json1<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json2<span class="token punctuation">)</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 内部同步读取文件</span>
+    <span class="token comment" spellcheck="true">// 其实这里用的是open</span>
+    <span class="token comment" spellcheck="true">// 这里方便理解requrie原理</span>
+    <span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span> <span class="token string">"fs"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> content <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span> path<span class="token punctuation">,</span> <span class="token string">"utf8"</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 这个content一定包含给module.exports赋值或者给exports添加属性的内容</span>
+    <span class="token comment" spellcheck="true">// var exports = module.exports;</span>
+    <span class="token comment" spellcheck="true">// 这样给exports点语法添加属性也能给module.exports添加属性</span>
+    <span class="token comment" spellcheck="true">// 是一种简写方式</span>
+    <span class="token comment" spellcheck="true">// 类似$ = jQuery;</span>
+    <span class="token keyword">var</span> packageStr <span class="token operator">=</span> <span class="token string">"function (module.exports, module) { var exports = module.exports;"</span><span class="token operator">+</span> content <span class="token operator">+</span><span class="token string">" return module.exports;}"</span>
+    <span class="token keyword">var</span> getModuleExports <span class="token operator">=</span> <span class="token function">eval</span><span class="token punctuation">(</span> packageStr <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token comment" spellcheck="true">//封装一个缓动动画框架，参数分别是要动的盒子，传入的样式json,和回调函数</span>
-        <span class="token keyword">function</span> <span class="token function">animate</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> json<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//用前清理定时器</span>
-            <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ele<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//通过开闭原则来为后续清理定时器做准备</span>
-                <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token keyword">var</span> leader<span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//如果属性是透明度的话做特殊处理</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//由于透明的的值是小数，计算会有误差，所以将其*100</span>
-                        leader <span class="token operator">=</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">||</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        leader <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                    <span class="token comment" spellcheck="true">//步长和二次处理</span>
-                    <span class="token keyword">var</span> step <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>
-                    step <span class="token operator">=</span> step <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span> <span class="token punctuation">:</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 创建module实例</span>
+    <span class="token keyword">var</span> module1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Module</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                    <span class="token comment" spellcheck="true">//赋值（注意透明度和层级）</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"zIndex"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//层级不作缓动处理，直接赋值</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">.</span>zIndex <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>leader <span class="token operator">+</span> step<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> leader <span class="token operator">+</span> step <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
 
-                    <span class="token comment" spellcheck="true">//清理定时器第一步</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">></span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//在这里判断是否还有属性需要继续向目标值移动，如果有，</span>
-                        <span class="token comment" spellcheck="true">//就将标识符改为false，阻止之后的清理定时器</span>
-                        flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token function">getModuleExports</span><span class="token punctuation">(</span> module1<span class="token punctuation">.</span>exports<span class="token punctuation">,</span> module1 <span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-                <span class="token comment" spellcheck="true">//清理定时器第二步</span>
-                <span class="token comment" spellcheck="true">//这里可以在控制台看是否清除了定时器</span>
-                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//这里是为了防止一些含有小数的目标值走不到位</span>
-                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span>
-                    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 这个obj就是在content中获得了赋值的module.exports;</span>
+    <span class="token comment" spellcheck="true">// !!!理解require获得的是module.exports这个对象</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
 
-                    <span class="token comment" spellcheck="true">//回调函数部分</span>
-                    <span class="token comment" spellcheck="true">//如果有回调函数就在上一个函数所有变化都结束后进行</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">//先封装一个获取属性函数</span>
-        <span class="token keyword">function</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> attr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>getComputedStyle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//兼容IE678</span>
-                <span class="token keyword">return</span> ele<span class="token punctuation">.</span>currentStyle<span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -619,21 +552,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/14/jquery手风琴轮播图简单插件练习/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/04/匀速动画和缓动动画简易封装笔记/" id="post_nav-older" class="next-content">
+        <a href="/2018/08/26/gulp-使用2/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

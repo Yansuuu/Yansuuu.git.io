@@ -43,7 +43,7 @@
     
     <title>
         
-            缓动动画框架简易版本封装二 | 
+            gulp---基本配置记录(2) | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,练习">
+    <meta name="keywords" content=",笔记,gulp">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/08/26/gulp-使用2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/">
+    <meta property="og:url" content="http://yoursite.com/2018/08/26/gulp-使用2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="缓动动画框架简易版本封装二 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="gulp---基本配置记录(2) | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
+    <meta property="og:article:tag" content="笔记"> <meta property="og:article:tag" content="gulp"> 
 
     
-        <meta property="article:published_time" content="Tue May 08 2018 05:03:38 GMT+0800">
-        <meta property="article:modified_time" content="Tue May 08 2018 05:14:39 GMT+0800">
+        <meta property="article:published_time" content="Sun Aug 26 2018 18:31:43 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 26 2018 18:34:30 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/08/26/gulp-使用2/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/05/08/缓动动画框架简易版本封装二/index.html",
-    "headline": "缓动动画框架简易版本封装二",
-    "datePublished": "Tue May 08 2018 05:03:38 GMT+0800",
-    "dateModified": "Tue May 08 2018 05:14:39 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/08/26/gulp-使用2/index.html",
+    "headline": "gulp---基本配置记录(2)",
+    "datePublished": "Sun Aug 26 2018 18:31:43 GMT+0800",
+    "dateModified": "Sun Aug 26 2018 18:34:30 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,练习",
+    "keywords": ",笔记,gulp",
     "description": "",
 }
 </script>
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Gulp介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">Gulp介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装-nodejs-查看版本-node-v"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装 nodejs, 查看版本: node -v</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建一个简单的应用gulp-test"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">创建一个简单的应用gulp_test</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装gulp"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装gulp:</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用gulp插件"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">使用gulp插件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动编译"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">自动编译</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -370,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                缓动动画框架简易版本封装二
+                gulp---基本配置记录(2)
             </p>
         </div>
 
@@ -389,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>5月 08, 2018</span>
+        <span>8月 26, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -413,7 +422,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+        <a class="post_tag-link" href="/tags/gulp/">gulp</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -458,147 +467,284 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>这次的缓动动画封装升级部分如下：</p>
-<ol>
-<li>传入一个json，可在动画中变化多个属性</li>
-<li>针对透明度和层级做了优化</li>
-<li>针对清除定时器做了优化</li>
-<li>可传递回调函数</li>
-</ol>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span><span class="token operator">!</span>DOCTYPE html<span class="token operator">></span>
-<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string">"en"</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>head<span class="token operator">></span>
-    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>title<span class="token operator">></span>缓动框架回调函数复习<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">></span>
-    <span class="token operator">&lt;</span>style type<span class="token operator">=</span><span class="token string">"text/css"</span><span class="token operator">></span>
-        <span class="token operator">*</span> <span class="token punctuation">{</span>
-            margin<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            padding<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        div <span class="token punctuation">{</span>
-            width<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-            height<span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-            border<span class="token punctuation">:</span> 3px solid #<span class="token number">666</span><span class="token punctuation">;</span>
-            border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 53px<span class="token punctuation">;</span>
-            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-            top<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
-            left<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
-            background<span class="token punctuation">:</span> #64FFDA<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        #box2 <span class="token punctuation">{</span>
-            position<span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
-            top<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-            left<span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
-            width<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
-            height<span class="token punctuation">:</span> 300px<span class="token punctuation">;</span>
-            background<span class="token punctuation">:</span> #<span class="token number">999</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">></span>
-<span class="token operator">&lt;</span>body<span class="token operator">></span>
-    <span class="token operator">&lt;</span>button<span class="token operator">></span>会变来变去<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>button<span class="token operator">></span>回到原处圆形<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span> <span class="token operator">--</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"box2"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+        <ul>
+<li><h1 id="Gulp介绍"><a href="#Gulp介绍" class="headerlink" title="Gulp介绍"></a>Gulp介绍</h1><ul>
+<li>中文主页: <a href="http://www.gulpjs.com.cn/" target="_blank" rel="noopener">http://www.gulpjs.com.cn/</a></li>
+<li>gulp是与grunt功能类似的<strong>前端项目构建</strong>工具, 也是基于Nodejs的自动<strong>任务运行器</strong></li>
+<li>能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的<br>合并、压缩、检查、监听文件变化、浏览器自动刷新、测试等任务</li>
+<li>gulp更高效(异步多任务), 更易于使用, 插件高质量</li>
+</ul>
+</li>
+<li><h2 id="安装-nodejs-查看版本-node-v"><a href="#安装-nodejs-查看版本-node-v" class="headerlink" title="安装 nodejs, 查看版本: node -v"></a>安装 nodejs, 查看版本: node -v</h2></li>
+<li><h2 id="创建一个简单的应用gulp-test"><a href="#创建一个简单的应用gulp-test" class="headerlink" title="创建一个简单的应用gulp_test"></a>创建一个简单的应用gulp_test</h2><pre><code>|- dist
+|- src
+  |- js
+  |- css
+  |- less
+|- index.html
+|- gulpfile.js-----gulp配置文件
+|- package.json
+  {
+    &quot;name&quot;: &quot;gulp_test&quot;,
+    &quot;version&quot;: &quot;1.0.0&quot;
+  } 
+</code></pre></li>
+<li><h2 id="安装gulp"><a href="#安装gulp" class="headerlink" title="安装gulp:"></a>安装gulp:</h2><ul>
+<li><p>全局安装gulp</p>
+<pre><code>npm install gulp -g
+</code></pre></li>
+<li><p>局部安装gulp</p>
+<pre><code>npm install gulp --save-dev
+</code></pre></li>
+<li><p>配置编码: gulpfile.js</p>
+<pre><code>//引入gulp模块
+var gulp = require(&#39;gulp&#39;);
+//定义默认任务
+gulp.task(&#39;任务名&#39;, function() {
+  // 将你的任务的任务代码放在这
+});
+gulp.task(&#39;default&#39;, [&#39;任务&#39;])//异步执行
+</code></pre></li>
+<li><p>构建命令: </p>
+<pre><code>gulp
+</code></pre></li>
+</ul>
+</li>
+<li><h2 id="使用gulp插件"><a href="#使用gulp插件" class="headerlink" title="使用gulp插件"></a>使用gulp插件</h2><ul>
+<li><p>相关插件:</p>
+<ul>
+<li>gulp-concat : 合并文件(js/css)</li>
+<li>gulp-uglify : 压缩js文件</li>
+<li>gulp-rename : 文件重命名</li>
+<li>gulp-less : 编译less</li>
+<li>gulp-clean-css : 压缩css</li>
+<li>gulp-livereload : 实时自动编译刷新</li>
+</ul>
+</li>
+<li><p>重要API</p>
+<ul>
+<li>gulp.src(filePath/pathArr) : <ul>
+<li>指向指定路径的所有文件, 返回文件流对象</li>
+<li>用于读取文件</li>
+</ul>
+</li>
+<li>gulp.dest(dirPath/pathArr)<ul>
+<li>指向指定的所有文件夹</li>
+<li>用于向文件夹中输出文件</li>
+</ul>
+</li>
+<li>gulp.task(name, [deps], fn) <ul>
+<li>定义一个任务</li>
+</ul>
+</li>
+<li>gulp.watch() <ul>
+<li>监视文件的变化</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>处理js</p>
+<ul>
+<li><p>创建js文件</p>
+<ul>
+<li><p>src/js/test1.js</p>
+<pre><code>(function () {
+  function add(num1, num2) {
+    var num3 = 0;
+    num1 = num2 + num3;
+    return num1 + num2;
+  }
+  console.log(add(10, 30));
+})();
+</code></pre></li>
+<li><p>src/js/test2.js</p>
+<pre><code>(function () {
+  var arr = [2,3,4].map(function (item, index) {
+      return item+1;
+  });
+  console.log(arr);
+})();
+</code></pre></li>
+</ul>
+</li>
+<li><p>下载插件:</p>
+<pre><code>npm install gulp-concat gulp-uglify gulp-rename --save-dev
+</code></pre></li>
+<li><p>配置编码</p>
+<pre><code>var concat = require(&#39;gulp-concat&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var rename = require(&#39;gulp-rename&#39;);
 
-    <span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">></span>
-        <span class="token comment" spellcheck="true">//老三步</span>
-        <span class="token keyword">var</span> btn <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementsByTagName</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"box"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//给 按钮绑上点击事件</span>
-        btn<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token punctuation">{</span>
-            <span class="token keyword">var</span> json1 <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
-                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">250</span><span class="token punctuation">,</span>
-                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">170</span><span class="token punctuation">,</span>
-                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-            <span class="token keyword">var</span> json2 <span class="token operator">=</span> <span class="token punctuation">{</span>
-                <span class="token string">"width"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"height"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span>
-                <span class="token string">"top"</span><span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token string">"left"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-                <span class="token string">"border-width"</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"border-radius"</span><span class="token punctuation">:</span> <span class="token number">53</span><span class="token punctuation">,</span>
-                <span class="token string">"opacity"</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token string">"zIndex"</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+gulp.task(&#39;minifyjs&#39;, function() {
+    return gulp.src(&#39;src/js/*.js&#39;) //操作的源文件
+        .pipe(concat(&#39;built.js&#39;)) //合并到临时文件     
+        .pipe(gulp.dest(&#39;dist/js&#39;)) //生成到目标文件夹
+        .pipe(rename({suffix: &#39;.min&#39;})) //重命名  
+        .pipe(uglify())    //压缩
+        .pipe(gulp.dest(&#39;dist/js&#39;));
+});
 
-            <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json1<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token function">animate</span><span class="token punctuation">(</span>box<span class="token punctuation">,</span> json2<span class="token punctuation">)</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
+gulp.task(&#39;default&#39;, [&#39;minifyjs&#39;]);
+</code></pre></li>
+<li><p>页面引入js浏览测试 : index.html</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot; src=&quot;dist/js/built.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>打包测试: gulp</p>
+</li>
+</ul>
+</li>
+<li><p>处理css</p>
+<ul>
+<li><p>创建less/css文件</p>
+<ul>
+<li><p>src/css/test1.css</p>
+<pre><code>#div1 {
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+</code></pre></li>
+<li><p>src/css/test2.css</p>
+<pre><code>#div2 {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+</code></pre></li>
+<li><p>src/less/test3.less</p>
+<pre><code>@base: yellow;
+.index1 { color: @base; }
+.index2 { color: green; }
+</code></pre></li>
+</ul>
+</li>
+<li><p>下载插件:</p>
+<pre><code>npm install gulp-less gulp-clean-css --save-dev 
+</code></pre></li>
+<li><p>配置编码</p>
+<pre><code>var less = require(&#39;gulp-less&#39;);
+var cleanCSS = require(&#39;gulp-clean-css&#39;);
 
-        <span class="token comment" spellcheck="true">//封装一个缓动动画框架，参数分别是要动的盒子，传入的样式json,和回调函数</span>
-        <span class="token keyword">function</span> <span class="token function">animate</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> json<span class="token punctuation">,</span> fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">//用前清理定时器</span>
-            <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ele<span class="token punctuation">.</span>timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//通过开闭原则来为后续清理定时器做准备</span>
-                <span class="token keyword">var</span> flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token keyword">var</span> leader<span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//如果属性是透明度的话做特殊处理</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//由于透明的的值是小数，计算会有误差，所以将其*100</span>
-                        leader <span class="token operator">=</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">||</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        leader <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                    <span class="token comment" spellcheck="true">//步长和二次处理</span>
-                    <span class="token keyword">var</span> step <span class="token operator">=</span> <span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">;</span>
-                    step <span class="token operator">=</span> step <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">?</span> Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span> <span class="token punctuation">:</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+//less处理任务
+gulp.task(&#39;lessTask&#39;, function () {
+  return gulp.src(&#39;src/less/*.less&#39;)
+      .pipe(less()) 
 
-                    <span class="token comment" spellcheck="true">//赋值（注意透明度和层级）</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"zIndex"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//层级不作缓动处理，直接赋值</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">.</span>zIndex <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>leader <span class="token operator">+</span> step<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                        ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> leader <span class="token operator">+</span> step <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
+      .pipe(gulp.dest(&#39;src/css&#39;));
+})
+//css处理任务, 指定依赖的任务
+gulp.task(&#39;cssTask&#39;,[&#39;lessTask&#39;], function () {
 
-                    <span class="token comment" spellcheck="true">//清理定时器第一步</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> leader<span class="token punctuation">)</span> <span class="token operator">></span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token comment" spellcheck="true">//在这里判断是否还有属性需要继续向目标值移动，如果有，</span>
-                        <span class="token comment" spellcheck="true">//就将标识符改为false，阻止之后的清理定时器</span>
-                        flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
+  return gulp.src(&#39;src/css/*.css&#39;)
+      .pipe(concat(&#39;built.css&#39;))
+      .pipe(gulp.dest(&#39;dist/css&#39;))
+      .pipe(rename({suffix: &#39;.min&#39;}))
+      .pipe(cleanCSS({compatibility: &#39;ie8&#39;}))
+      .pipe(gulp.dest(&#39;dist/css&#39;));
+});
 
-                <span class="token comment" spellcheck="true">//清理定时器第二步</span>
-                <span class="token comment" spellcheck="true">//这里可以在控制台看是否清除了定时器</span>
-                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token function">clearInterval</span><span class="token punctuation">(</span>ele<span class="token punctuation">.</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token comment" spellcheck="true">//这里是为了防止一些含有小数的目标值走不到位</span>
-                    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> k <span class="token keyword">in</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token keyword">if</span> <span class="token punctuation">(</span>k <span class="token operator">===</span> <span class="token string">"opacity"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                            ele<span class="token punctuation">.</span>style<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> json<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">;</span>
-                        <span class="token punctuation">}</span>
-                    <span class="token punctuation">}</span>
+gulp.task(&#39;default&#39;, [&#39;minifyjs&#39;, &#39;cssTask&#39;]);
+</code></pre></li>
+<li><p>页面引入css浏览测试 : index.html</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;dist/css/built.min.css&quot;&gt;
+&lt;div id=&quot;div1&quot; class=&quot;index1&quot;&gt;div1111111&lt;/div&gt;
+&lt;div id=&quot;div2&quot; class=&quot;index2&quot;&gt;div2222222&lt;/div&gt;
+</code></pre></li>
+<li><p>打包测试: gulp</p>
+</li>
+</ul>
+</li>
+<li><p>处理html</p>
+<ul>
+<li><p>下载插件:</p>
+<pre><code>npm install gulp-htmlmin --save-dev
+</code></pre></li>
+<li><p>配置编码</p>
+<pre><code>var htmlmin = require(&#39;gulp-htmlmin&#39;);
+//压缩html任务
+gulp.task(&#39;htmlMinify&#39;, function() {
+    return gulp.src(&#39;index.html&#39;)
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest(&#39;dist&#39;));
+});
+gulp.task(&#39;default&#39;, [&#39;minifyjs&#39;, &#39;cssTask&#39;, &#39;htmlMinify&#39;]);
+</code></pre></li>
+<li><p>修改页面引入</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/built.min.css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/built.min.js&quot;&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>打包测试: gulp    </p>
+</li>
+</ul>
+</li>
+<li><h3 id="自动编译"><a href="#自动编译" class="headerlink" title="自动编译"></a>自动编译</h3><ul>
+<li><p>下载插件</p>
+<pre><code>npm install gulp-livereload --save-dev
+</code></pre></li>
+<li><p>配置编码:</p>
+<pre><code>var livereload = require(&#39;gulp-livereload&#39;);
 
-                    <span class="token comment" spellcheck="true">//回调函数部分</span>
-                    <span class="token comment" spellcheck="true">//如果有回调函数就在上一个函数所有变化都结束后进行</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                        <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token punctuation">}</span>
-                <span class="token punctuation">}</span>
+//所有的pipe
+.pipe(livereload());
 
-            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
-        <span class="token punctuation">}</span>
-
-        <span class="token comment" spellcheck="true">//先封装一个获取属性函数</span>
-        <span class="token keyword">function</span> <span class="token function">getStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> attr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>getComputedStyle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">return</span> window<span class="token punctuation">.</span><span class="token function">getComputedStyle</span><span class="token punctuation">(</span>ele<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">//兼容IE678</span>
-                <span class="token keyword">return</span> ele<span class="token punctuation">.</span>currentStyle<span class="token punctuation">[</span>attr<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-
-<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+gulp.task(&#39;watch&#39;, [&#39;default&#39;], function () {    
+  //开启监视
+  livereload.listen();
+  //监视指定的文件, 并指定对应的处理任务
+  gulp.watch(&#39;src/js/*.js&#39;, [&#39;minifyjs&#39;])
+  gulp.watch([&#39;src/css/*.css&#39;,&#39;src/less/*.less&#39;], [&#39;cssTask&#39;,&#39;lessTask&#39;]);
+});
+</code></pre></li>
+<li><p>热加载(实时加载)</p>
+<ul>
+<li>下载插件：gulp-connect</li>
+</ul>
+<pre><code>1、 npm install gulp-connect --save-dev
+2、 注册 热加载的任务 server，注意依赖build任务 
+3、注册热加载的任务
+    //配置加载的选项
+    connect.server({
+          root : &#39;dist/&#39;,//监视的源目标文件路径
+          livereload : true,//是否实时刷新
+          port : 5000//开启端口号
+     });
+     // 自动开启链接
+     open(&#39;http://localhost:5000&#39;);//npm install open --save-dev
+     // 监视目标文件
+    gulp.watch(&#39;src/js/*.js&#39;, [&#39;js&#39;]);
+    gulp.watch([&#39;src/css/*.css&#39;, &#39;src/css/*.less&#39;], [&#39;cssMin&#39;, &#39;less&#39;]);
+</code></pre></li>
+<li><p>扩展</p>
+<ul>
+<li><p>打包加载gulp插件</p>
+</li>
+<li><p>前提：将插件下载好。</p>
+</li>
+<li><p>下载打包插件： gulp-load-plugins</p>
+</li>
+<li><p>npm install gulp-load-plugins –save-dev</p>
+</li>
+<li><p>引入： var $ = require(‘gulp-load-plugins’)();！！！引入的插件是个方法，必须记住调用。</p>
+</li>
+<li><p>神来之笔：其他的插件不用再引入了</p>
+</li>
+<li><p>使用方法：</p>
+<pre><code>* 所有的插件用 $ 引出，其他插件的方法名统一为插件的功能名字(即插件名字的最后一部分)：如：concat,connect,cssmin...
+gulp.task(&#39;less&#39;, function () {
+    return gulp.src(&#39;src/less/*.less&#39;)
+.pipe($.less())//将less转换为less
+.pipe(gulp.dest(&#39;src/css/&#39;))//将转换为less的文件输出到src下
+.pipe($.livereload())//实时刷新
+.pipe($.connect.reload())
+});
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
         
     
@@ -619,7 +765,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/14/jquery手风琴轮播图简单插件练习/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/08/28/node-js学习笔记一-require解析/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -633,7 +779,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/04/匀速动画和缓动动画简易封装笔记/" id="post_nav-older" class="next-content">
+        <a href="/2018/08/25/gulp-基本配置记录/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
