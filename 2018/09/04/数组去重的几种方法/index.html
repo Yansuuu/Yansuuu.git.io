@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",笔记,javascript,算法">
+    <meta name="keywords" content=",javascript,算法,笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -235,11 +235,11 @@
     <meta property="og:title" content="数组去重的几种方法 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="笔记"> <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="算法"> 
+    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="算法"> <meta property="og:article:tag" content="笔记"> 
 
     
         <meta property="article:published_time" content="Tue Sep 04 2018 03:10:39 GMT+0800">
-        <meta property="article:modified_time" content="Tue Sep 04 2018 04:54:22 GMT+0800">
+        <meta property="article:modified_time" content="Wed Sep 05 2018 07:09:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://yoursite.com/2018/09/04/数组去重的几种方法/index.html",
     "headline": "数组去重的几种方法",
     "datePublished": "Tue Sep 04 2018 03:10:39 GMT+0800",
-    "dateModified": "Tue Sep 04 2018 04:54:22 GMT+0800",
+    "dateModified": "Wed Sep 05 2018 07:09:07 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",笔记,javascript,算法",
+    "keywords": ",javascript,算法,笔记",
     "description": "",
 }
 </script>
@@ -513,8 +513,22 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 反向遍历实现2</span>
+<span class="token keyword">function</span> <span class="token function">delDup2</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> cur <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 遍历到i的后一项</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">></span> i<span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>cur <span class="token operator">==</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">removeDup2</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="2-indexOf法"><a href="#2-indexOf法" class="headerlink" title="2.indexOf法"></a>2.indexOf法</h1><p>只有一重循环，使用indexOf判断数组中是否有相同值</p>
 <p>i数组的ndexOf方法不支持ie678；</p>
 <h2 id="正向遍历-1"><a href="#正向遍历-1" class="headerlink" title="正向遍历"></a>正向遍历</h2><pre class="line-numbers language-javascript"><code class="language-javascript">arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -660,9 +674,9 @@ Array<span class="token punctuation">.</span>prototype<span class="token punctua
     <span class="token comment" spellcheck="true">// 会改变原数组顺序</span>
     arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> arr<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">continue</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 和它前一项对比</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">===</span> arr<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>；
         <span class="token punctuation">}</span> 
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
