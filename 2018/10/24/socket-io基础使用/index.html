@@ -43,7 +43,7 @@
     
     <title>
         
-            AJAX封装练习进阶 | 
+            socket.io基础使用和 express 配合使用 | 
         
         Yansuuu&#39;s blog
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content=",javascript,练习">
+    <meta name="keywords" content=",笔记">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Yansuuu&#39;s blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/06/15/AJAX封装练习进阶/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/10/24/socket-io基础使用/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Yansuuu&#39;s blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/06/15/AJAX封装练习进阶/">
+    <meta property="og:url" content="http://yoursite.com/2018/10/24/socket-io基础使用/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="AJAX封装练习进阶 | Yansuuu&#39;s blog">
+    <meta property="og:title" content="socket.io基础使用和 express 配合使用 | Yansuuu&#39;s blog">
     <meta property="og:image" content="/img/cointoss-favicon.png">
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="javascript"> <meta property="og:article:tag" content="练习"> 
+    <meta property="og:article:tag" content="笔记"> 
 
     
-        <meta property="article:published_time" content="Fri Jun 15 2018 04:25:55 GMT+0800">
-        <meta property="article:modified_time" content="Fri Jun 15 2018 05:25:31 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 24 2018 19:39:58 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 24 2018 19:55:22 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/06/15/AJAX封装练习进阶/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/10/24/socket-io基础使用/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/06/15/AJAX封装练习进阶/index.html",
-    "headline": "AJAX封装练习进阶",
-    "datePublished": "Fri Jun 15 2018 04:25:55 GMT+0800",
-    "dateModified": "Fri Jun 15 2018 05:25:31 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/10/24/socket-io基础使用/index.html",
+    "headline": "socket.io基础使用和 express 配合使用",
+    "datePublished": "Wed Oct 24 2018 19:39:58 GMT+0800",
+    "dateModified": "Wed Oct 24 2018 19:55:22 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Yansuuu",
@@ -280,7 +280,7 @@
             "url": "/img/cointoss-favicon.png"
         }
     },
-    "keywords": ",javascript,练习",
+    "keywords": ",笔记",
     "description": "",
 }
 </script>
@@ -341,6 +341,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#socket-io-基础使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">socket.io 基础使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#server-端"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">server 端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器端"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">浏览器端</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#socket-io-配合-express-使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">socket.io 配合 express 使用</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -370,7 +379,7 @@
         
     
             <p class="article-headline-p">
-                AJAX封装练习进阶
+                socket.io基础使用和 express 配合使用
             </p>
         </div>
 
@@ -389,7 +398,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Yansuuu</strong>
-        <span>6月 15, 2018</span>
+        <span>10月 24, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -413,7 +422,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javascript/">javascript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/练习/">练习</a>
+        <a class="post_tag-link" href="/tags/笔记/">笔记</a>
     </ul>
     
 
@@ -458,111 +467,193 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>进阶版对传入参数进行了优化</p>
-<p>第一版发现封装的函数再调用的时候需要传入很多参数，并且参数顺序并不能出错</p>
-<p>在此基础上进行了改动，将对象作为参数传入</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 第二版本将对象作为 参数传入</span>
-obj <span class="token operator">=</span> <span class="token punctuation">{</span>
-    type<span class="token punctuation">:</span> <span class="token string">"post"</span><span class="token punctuation">,</span>
-    utl<span class="token punctuation">:</span> <span class="token string">"xxx.php"</span><span class="token punctuation">,</span>
-    data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-    dataType<span class="token punctuation">:</span> <span class="token string">"text/xml/json"</span><span class="token punctuation">,</span>
-    success<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token number">111</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token keyword">async</span><span class="token punctuation">:</span>  <span class="token boolean">true</span>
-<span class="token punctuation">}</span>
+        <h2 id="socket-io-基础使用"><a href="#socket-io-基础使用" class="headerlink" title="socket.io 基础使用"></a>socket.io 基础使用</h2><h3 id="server-端"><a href="#server-端" class="headerlink" title="server 端"></a>server 端</h3><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// websocket 是在 http 基础上实现的</span>
+<span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> io <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'socket.io'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
+<span class="token comment" spellcheck="true">// 原生 http 模块创建服务器对象 并监听端口</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="token keyword">function</span> <span class="token function">myAjax2</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 可以设置一个默认对象,常用参数值</span>
-    <span class="token keyword">var</span> defaults <span class="token operator">=</span> <span class="token punctuation">{</span>
-        type<span class="token punctuation">:</span> <span class="token string">"get"</span><span class="token punctuation">,</span>
-        url<span class="token punctuation">:</span> <span class="token string">"#"</span><span class="token punctuation">,</span>
-        data<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-        dataType<span class="token punctuation">:</span> <span class="token string">"json"</span><span class="token punctuation">,</span>
-        success<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token keyword">async</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+<span class="token comment" spellcheck="true">// 监听 http 的服务器对象创建 websocket 服务器对象</span>
+<span class="token keyword">const</span> wsServer <span class="token operator">=</span> io<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>server<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 连接连接数组</span>
+<span class="token keyword">const</span> sockArr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 监听连接事件</span>
+wsServer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'connection'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>socket<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// console.log('建立连接了');</span>
+  <span class="token comment" spellcheck="true">// 每新建一个连接就将它塞入连接数组</span>
+  sockArr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>socket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// 当断开连接后 就将断开连接的 socket 从 sockArr 中删除</span>
+  socket<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'disconnect'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> n <span class="token operator">=</span> sockArr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>socket<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    sockArr<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">// socket.on 接收</span>
+  socket<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'msg'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 给除了自己之外的每一个连接发过去</span>
+    sockArr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>s <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">!==</span> socket<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">// socket.emit 发送</span>
+        s<span class="token punctuation">.</span><span class="token function">emit</span><span class="token punctuation">(</span><span class="token string">'msg'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="浏览器端"><a href="#浏览器端" class="headerlink" title="浏览器端"></a>浏览器端</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ie<span class="token punctuation">=</span>edge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>websocket与socketio练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token selector">html,
+    body,
+    h2,
+    div,
+    ul,
+    li,
+    textarea </span><span class="token punctuation">{</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+      <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">html,
+    body </span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">h2 </span><span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">20%</span><span class="token punctuation">;</span>
+      <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.wrapper</span> </span><span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">70%</span><span class="token punctuation">;</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">60%</span><span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+      <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+      <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">bottom</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token property">margin</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">ul </span><span class="token punctuation">{</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">75%</span><span class="token punctuation">;</span>
+      <span class="token property">border-bottom</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#000</span><span class="token punctuation">;</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">18</span>px<span class="token punctuation">;</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+      <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+      <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">ul > li </span><span class="token punctuation">{</span>
+      <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.msg</span> </span><span class="token punctuation">{</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">5</span>px <span class="token number">15</span>px<span class="token punctuation">;</span>
+      <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+      <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.other-msg</span> </span><span class="token punctuation">{</span>
+      <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token class">.my-msg</span> </span><span class="token punctuation">{</span>
+      <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#00775b</span><span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#fff</span><span class="token punctuation">;</span>
+      <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-    <span class="token comment" spellcheck="true">// 可以将不存在默认对象中的键值对存在</span>
-    <span class="token comment" spellcheck="true">// 同时存在的覆盖默认对象键值对</span>
-    <span class="token comment" spellcheck="true">// 用户对象中没有的使用默认对象设定值</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        defaults<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token selector">textarea </span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+      <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">24%</span><span class="token punctuation">;</span>
+      <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>使用 socke.io 库来搭建一个聊天室<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>oUl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token comment" spellcheck="true">&lt;!-- &lt;li>&lt;span class="msg other-msg">hahah&lt;/span>&lt;/li>
+      &lt;li>&lt;span class="msg my-msg">xixixi&lt;/span>&lt;/li> --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 
-    <span class="token comment" spellcheck="true">//注意下方对象取值</span>
-    <span class="token keyword">var</span> ajax <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>XMLHttpRequest<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        ajax <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        ajax <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActiveXObject</span><span class="token punctuation">(</span><span class="token string">"Microsoft.XMLHTTP"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">&lt;!-- 引入 socket.io.js --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://localhost:3000/socket.io/socket.io.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+    // 协议从 http => ws
+    const socket = io.connect('ws://localhost:3000/');
+    socket.on('connect', () => {
+      console.log('连接建立');
 
-    <span class="token comment" spellcheck="true">// 注意data需要转变成字符串</span>
-    <span class="token comment" spellcheck="true">// data: {</span>
-    <span class="token comment" spellcheck="true">//     name: "zhangsna",</span>
-    <span class="token comment" spellcheck="true">//     age: 24</span>
-    <span class="token comment" spellcheck="true">// }</span>
-    <span class="token comment" spellcheck="true">// name=zhangsan&amp;age=24</span>
-    <span class="token keyword">var</span> params <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> attr <span class="token keyword">in</span> defaults<span class="token punctuation">.</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        params <span class="token operator">+</span><span class="token operator">=</span> attr <span class="token operator">+</span> <span class="token string">"="</span> <span class="token operator">+</span> defaults<span class="token punctuation">.</span>data<span class="token punctuation">[</span>attr<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">"&amp;"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token comment" spellcheck="true">// 这样得出的name=zhangsan&amp;age=24&amp;</span>
-    <span class="token comment" spellcheck="true">// 需要将后面的&amp;去掉</span>
-    <span class="token comment" spellcheck="true">// 使用字符串.slice/substring(0,str.length-1) </span>
-    params <span class="token operator">=</span> params<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> params<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    });
+    socket.on('disconnect', () => {
+      console.log('连接断开');
 
-    <span class="token comment" spellcheck="true">// 准备请求</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">"get"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        defaults<span class="token punctuation">.</span>url <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">"?"</span> <span class="token operator">+</span> params<span class="token punctuation">;</span>
-        params <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    ajax<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>type<span class="token punctuation">,</span> defaults<span class="token punctuation">.</span>url<span class="token punctuation">,</span> defaults<span class="token punctuation">.</span><span class="token keyword">async</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    });
 
-    <span class="token comment" spellcheck="true">// 发送请求</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>type <span class="token operator">==</span> <span class="token string">"post"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        ajax<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">"Content-type"</span><span class="token punctuation">,</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    ajax<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    window.onload = function () {
 
-    <span class="token comment" spellcheck="true">// 根据同步异步判断是否注册事件</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span><span class="token keyword">async</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        ajax<span class="token punctuation">.</span>onreadystatechange <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>ajax<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> ajax<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token comment" spellcheck="true">// 根据格式判断使用responseText/XML</span>
-                <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>dataType <span class="token operator">==</span> <span class="token string">"json"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    result <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>ajax<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>dataType <span class="token operator">==</span> <span class="token string">"xml"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    result <span class="token operator">=</span> ajax<span class="token punctuation">.</span>responseXML<span class="token punctuation">;</span>
-                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                    result <span class="token operator">=</span> ajax<span class="token punctuation">.</span>responseText<span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                defaults<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 同步</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>ajax<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> ajax<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// 根据格式判断使用responseText/XML</span>
-            <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>dataType <span class="token operator">==</span> <span class="token string">"json"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                result <span class="token operator">=</span> JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>ajax<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>defaults<span class="token punctuation">.</span>dataType <span class="token operator">==</span> <span class="token string">"xml"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                result <span class="token operator">=</span> ajax<span class="token punctuation">.</span>responseXML<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-                result <span class="token operator">=</span> ajax<span class="token punctuation">.</span>responseText<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            defaults<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+      const oUl = document.querySelector('#oUl');
+      const oText = document.querySelector('#msg');
+
+      // 输入
+      oText.onkeyup = function (e) {
+        if (e.keyCode === 13) {
+          // 发送消息
+          const text = oText.value;
+          socket.emit('msg', text);
+          // 在页面中创建 自己的对话显示
+          const myLi = document.createElement('li');
+          myLi.innerHTML = `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg my-msg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>${text}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>`;
+          oUl.append(myLi);
+
+          // 清空输入框
+          oText.value = '';
+        }
+      }
+
+    }
+
+    // 接受信息
+    socket.on('msg', (data) => {
+      // 创建对方对话框
+      const otherLi = document.createElement('li');
+      otherLi.innerHTML = `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>msg other-msg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>${data}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>`;
+      oUl.append(otherLi);
+    }); 
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="socket-io-配合-express-使用"><a href="#socket-io-配合-express-使用" class="headerlink" title="socket.io 配合 express 使用"></a>socket.io 配合 express 使用</h2><p><code>TIP</code>记住 websocket 是基于 http 实现的</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">const</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'http'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> io <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'socket.io'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 创建 express 对象</span>
+cosnt app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 原生 http 对 express 对象进行处理 生成 http 服务器对象</span>
+<span class="token keyword">const</span> server <span class="token operator">=</span> http<span class="token punctuation">.</span><span class="token function">Server</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// http 服务器对象监听端口</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// io 对象创建 websocket 服务器对象 监听 http 服务器对象</span>
+<span class="token keyword">const</span> wsServer <span class="token operator">=</span> io<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>server<span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
         
     
@@ -583,21 +674,13 @@ obj <span class="token operator">=</span> <span class="token punctuation">{</spa
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/27/移动端单击事件的简单实现/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/06/15/AJAX封装练习/" id="post_nav-older" class="next-content">
+        <a href="/2018/10/11/node-js学习笔记---cookie操作封装/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
